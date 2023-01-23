@@ -16,13 +16,23 @@ ________________________________________________________________________________
 
 [README.md Part-A](Part-A/README.md) - Analysis, Architecture and Design Documentation
 
-# Backend
+____________________________________________________________________________________
+
+## Table of Contents
+
+1. [Backend](#backend)
+2. [Frontend](#frontend)
+3. [Project Delivery](#tracking)
+
+# Backend<a name="backend"></a>
 
 add information here
 
-# Frontend
+# Frontend<a name="frontend"></a>
 
 ## Packages
+
+Packages used for the Frontend
 
 * vite
 
@@ -36,3 +46,17 @@ npm install
 npm run dev
 
 ```
+
+# Project Delivery<a name="tracking"></a>
+
+## Trello Screenshots
+
+**Day 1**
+
+* Start with a Team catch up 
+* Create a Repository
+* Create folder structures for Backend/Frontend
+* Install dependencies
+
+<img src="docs/images/trello/day1.png" width="600">
+
