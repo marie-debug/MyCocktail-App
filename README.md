@@ -35,6 +35,10 @@ add information here
 Packages used for the Frontend
 
 * vite
+* .dotenv
+* react-router-dom
+* react-icons
+
 
 ## To run the frontend
 
