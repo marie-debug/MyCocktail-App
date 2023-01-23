@@ -43,7 +43,7 @@ ________________________________________________________________
 # My Cocktail App<a name="mycocktail"></a>
 
 # Introduction<a name="introduction"></a>
-The purpose of **My Cocktail App** is to develop a Wiki app guide to making classic and modern cocktails. Using the  cocktail database API. It features a database with  lists  of ingredients for each cocktail recipe, allowing users to quickly find the ingredients they need to craft a particular drink, by filtering using alcohol type and name of cocktail.
+The purpose of **My Cocktail App** is to develop a Wiki app guide to making classic and modern cocktails. Using the  cocktail database API. It features a database with  lists  of ingredients for each cocktail recipe, allowing users to quickly find the ingredients they need to craft a particular drink, by filtering using alcohol type and name of cocktail..
 
 **Target Audience:**
 
