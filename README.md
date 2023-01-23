@@ -58,5 +58,5 @@ npm run dev
 * Create folder structures for Backend/Frontend
 * Install dependencies
 
-<img src="docs/images/trello/day1.png" width="600">
+<img src="docs/images/trello/day1.png" width="500">
 
