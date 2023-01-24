@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+
+
 import { FaWineBottle, FaCocktail } from 'react-icons/fa'
 
 function Search() {
-  const navigate = useNavigate()
+
 
  
 
