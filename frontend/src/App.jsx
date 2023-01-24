@@ -1,28 +1,20 @@
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Search from './pages/Search'
+import Header from './components/Header'
+
 
 function App() {
-
   return (
-    <div className="App">
-      <div>
-        <section className='heading'>
-          <h1>1.2.3...Let's Party</h1>
-          <p>It's that easy to find your perfect cocktail.</p>
-        </section>
+    <>
+      <Router>
+      <div className='container'>
+      <Header />
+        <Routes>
+          <Route path='/' element={<Search />} />
+        </Routes>
       </div>
-      <div>
-        <form>
-          <input 
-            type='search'
-            className='form-group'
-            placeholder='Search for your favourite cocktail or alcohol..'
-          />
-          <div className='form-group'>
-            <button type='submit' className='btn'>Search</button>
-          </div>
-        </form>
-      </div>
-    </div>
+      </Router>
+    </>
   )
 }
 
