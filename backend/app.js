@@ -3,30 +3,30 @@ import express from 'express';
 
 const app = express();
 
-app.get('/cocktails', function(req, res){
 
+//get cocktail by name
+app.get('/cocktails/:name', async function(req, res){
 
+    // console.log(req.params.name)
+    const response = await fetch('https://thecocktaildb.com/api/json/v1/1/search.php?s='+ req.params.name);
+    const data = await response.json();
+    let cocktailDetails = data.drinks
     
-   res.send("cocktails");
+    let cocktails = new Array()
+    cocktailDetails.forEach((item,index)=>{
+      
+        cocktails.push({
+                "name": item.strDrink,
+                "recipe": item.strInstructions
+            
+            })
+    })
+    
+    
+   res.send(cocktails);
 });
 
 
-
-const response = await fetch('https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
-const data = await response.json();
-let cocktailDetails = data.drinks
-
-let cocktails = new Array()
-cocktailDetails.forEach((item,index)=>{
-  
-    cocktails.push({
-            "name": item.strDrink,
-            "recipe": item.strInstructions
-        
-        })
-})
-
-console.log(cocktails)
 
 
 app.listen(3000);
