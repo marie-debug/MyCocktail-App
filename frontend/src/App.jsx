@@ -7,12 +7,12 @@ function App() {
   return (
     <>
       <Router>
-      <div className='container'>
-      <Header />
-        <Routes>
-          <Route path='/' element={<Search />} />
-        </Routes>
-      </div>
+        <div className='container'>
+          <Header />
+            <Routes>
+              <Route path='/' element={<Search />} />
+            </Routes>
+        </div>
       </Router>
     </>
   )
