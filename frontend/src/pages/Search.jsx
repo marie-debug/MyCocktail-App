@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaWineBottle, FaCocktail } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 function Search() {
@@ -9,6 +10,8 @@ function Search() {
         <section className='heading'>
           <h1>1.2.3...Let's Party</h1>
           <p>It's that easy to find your perfect cocktail.</p>
+          <FaCocktail /> 
+          <FaWineBottle />
         </section>
       </div>
       <div>
