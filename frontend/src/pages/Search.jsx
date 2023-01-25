@@ -4,9 +4,6 @@ import { FaWineBottle, FaCocktail } from 'react-icons/fa'
 
 function Search() {
 
-
- 
-
   return (
     <>
       <section className='heading'>
