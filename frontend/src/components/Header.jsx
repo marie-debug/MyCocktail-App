@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { FaHome, FaCocktail, FaGrinHearts } from 'react-icons/fa'
 
 
 const Header = () => {
@@ -18,7 +19,13 @@ const Header = () => {
             <div class="offcanvas-body">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                  <Link className="nav-link active" aria-current="page" to="/"><FaHome />Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/favourites"><FaGrinHearts />Favourites</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/cocktail-list"><FaCocktail />Cocktail List</Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/results">Results</Link>
