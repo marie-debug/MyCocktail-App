@@ -1,8 +1,9 @@
 
 
-import { FaWineBottle, FaCocktail } from 'react-icons/fa'
+import { FaWineBottle, FaCocktail, FaSearch } from 'react-icons/fa'
 
 function Search() {
+
 
   return (
     <>
@@ -14,18 +15,18 @@ function Search() {
       </section>
 
       <section className='content'>
-        <div classname='goals'>
           <form>
-            <input 
-              type='search'
-              className='form-group'
-              placeholder='Search for your favourite cocktail or alcohol..'
-            />
             <div className='form-group'>
-              <button type='submit' className='btn'>Search</button>
+              <input 
+                type='search'
+                className='form-group'
+                placeholder='Search for your favourite cocktail or alcohol..'
+              />
+              <div className='form-group'>
+                <button type='submit' className='btn btn-block'>Search</button>
+              </div>
             </div>
           </form>
-        </div>
       </section>
     </>
   )
