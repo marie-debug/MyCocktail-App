@@ -38,6 +38,9 @@ Packages used for the Frontend
 * .dotenv
 * react-router-dom
 * react-icons
+* axios
+* toastify
+* boostrap
 
 
 ## To run the frontend
@@ -63,4 +66,16 @@ npm run dev
 * Install dependencies
 
 <img src="docs/images/trello/day1.png" width="500">
+
+**Day 3** 
+
+* Challenges and steep learning curve to get the React Frontend working
+* Success on getting a payload 
+* After investigation with better payload data, the api we are using is api ninja
+* A few challenges in learning to use git collaborately. Working well now.
+
+<img src="docs/images/trello/day3.png" width="500">
+
+<img src="docs/images/mw_day3.png" width="200">
+<img src="docs/images/mw_day3_nav.png" width="200">
 
