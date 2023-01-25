@@ -76,6 +76,5 @@ npm run dev
 
 <img src="docs/images/trello/day3.png" width="500">
 
-<img src="docs/images/mw_day3.png" width="200">
-<img src="docs/images/mw_day3_nav.png" width="200">
+<img src="docs/images/mw_day3.png" width="200"> <img src="docs/images/mw_day3_nav.png" width="200">
 
