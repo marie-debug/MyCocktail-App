@@ -16,20 +16,21 @@ function Search() {
  }
 
 
-  return (
-    <>
-      <section className='heading'>
-        <h1>1.2.3...Let's Party</h1>
-        <p>It's that easy to find your perfect cocktail.</p>
-        <FaCocktail /> 
-        <FaWineBottle />
-        <SearchBox searchChange={onSearchChange}/>
-        <button type='submit' className='btn btn-block'>Search</button>
-      </section>
+ return (
+  <>
+    <section className='heading'>
+      <h1>It's cocktail hour!</h1>
+      <p>It's that easy to search your perfect cocktail.</p>
 
-      
-    </>
-  )
+      <SearchBox searchChange={onSearchChange}/>
+      <div class="row justify-content-center">
+        <button type='submit' className='btn btn-warning'>Search</button>
+      </div>
+    </section>
+
+    
+  </>
+)
 }
 
 export default Search

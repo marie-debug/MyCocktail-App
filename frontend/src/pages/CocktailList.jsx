@@ -4,7 +4,7 @@ function CocktailList() {
   return (
     <>
       <section className='content'>
-        <h1>It's Cocktail Hour</h1>
+        <h1>Keep Calm and drink a cocktail</h1>
         <p>Browse through our list of cocktails</p>
       </section>
     </>
