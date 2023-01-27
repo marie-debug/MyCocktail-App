@@ -22,7 +22,7 @@ function App() {
             <Route path='/results' element={<Results />} />
             <Route path='/cocktail' element={<Cocktail />} />
             <Route path='/favourites' element={<Favourites />} />
-            <Route path='/cocktail-list' element={<CocktailList />} />
+            <Route path='/cocktailList' element={<CocktailList />} />
             <Route path='*' element={<Error />} />
           </Routes>
           <Footer />
