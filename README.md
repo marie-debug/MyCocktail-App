@@ -78,3 +78,13 @@ npm run dev
 
 <img src="docs/images/mw_day3.png" width="200"> <img src="docs/images/mw_day3_nav.png" width="200">
 
+**Day 5**
+
+* Public Holiday on Thursday (Australia Day) 
+* Finishing up on Search functionality in React
+* Seperated SearchBox as a component 
+* Styling updated 
+
+<img src="docs/images/design_inspiration.png" width="300">
+
+<img src="docs/images/dt_day5.png" width="300">
