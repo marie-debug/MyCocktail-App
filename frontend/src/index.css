@@ -17,6 +17,7 @@ a {
 
 p {
   line-height: 1.7;
+  color: #183230;
 }
 
 ul {
@@ -27,11 +28,17 @@ li {
   line-height: 2.2;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
 h1,
 h2,
 h3 {
   font-weight: 600;
   margin-bottom: 10px;
+  font-family: 'Work Sans', sans-serif;
+  color: #183230;
 }
 
 .container {
@@ -49,12 +56,43 @@ h3 {
   padding: 20px 0;
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
+  background: #183230;
+  border-radius: 10px;
 }
 
-.navbar-brand {
+.navbar-header {
   margin-left: 10px;
 }
 
+.navbar-brand {
+  margin-left: 20px;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  float: none;
+}
+
+.navbar-toggler {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.offcanvas {
+  background: #183230;
+}
+
+.offcanvas-header {
+  background: #183230;
+}
+.btn {
+  color: #fff;
+}
+
+.offcanvas-body {
+  background: #183230;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
 
 .header ul {
   display: flex;
@@ -87,7 +125,16 @@ h3 {
 }
 
 .heading p {
-  color: #828282;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 100px;
+  width: 100px;
+  background: #FAEFEE;
+  margin: 15px;
 }
 
 .form,
@@ -103,12 +150,15 @@ h3 {
 .form-group input,
 .form-group textarea,
 .form-group select {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #e6e6e6;
-  border-radius: 5px;
+  border-radius: 15px;
+  margin-top: 40px;
   margin-bottom: 10px;
   font-family: inherit;
+  font-size: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .form-group label {
@@ -123,6 +173,8 @@ h3 {
     margin-top: auto;
     padding: 5px 20px;
     text-align: center;
+    background: #183230;
+    border-radius: 10px;
 }
 
 .footer-p {
@@ -131,10 +183,8 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  background: #000;
-  color: #fff;
+  background: #F2B137;
+  color: #183230;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -143,6 +193,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 30%;
 }
 
 .btn svg {
@@ -150,13 +201,9 @@ h3 {
 }
 
 .btn-reverse {
-  background: #fff;
-  color: #000;
-}
-
-.btn-block {
-  width: 100%;
-  margin-bottom: 20px;
+  background: #FA8216;
+  color: #183230;
+  
 }
 
 .btn:hover {
@@ -183,6 +230,10 @@ h3 {
   border-color: #000 transparent #555 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
+}
+
+#cry {
+  margin-bottom: 20px;
 }
 
 @keyframes spin {

@@ -28,9 +28,11 @@ const  CocktailList= ()=> {
  
 
   return (
-    <div>
-      <h1> Here is a variation of cocktails</h1>
-
+    <>
+   <section className='content'>
+        <h1>Keep Calm and drink a cocktail</h1>
+        <p>Browse through our list of cocktails</p>
+      </section>
       {cocktails.map((cocktail) => {
           return (
             <>
@@ -42,7 +44,7 @@ const  CocktailList= ()=> {
           }
      
       )}
-  </div>
+  </>
   )
 }
 
