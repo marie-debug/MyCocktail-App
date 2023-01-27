@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
 [Miro](https://miro.com/app/board/uXjVPzbXD88=/) - Virtual Whiteboard for Team Collaboration (Anyone with link can view)
 
-[README.md Part-A](Part-A/README.md) - Analysis, Architecture and Design Documentation
+[README.md Part-A](/docs/part-a/README.md) - Analysis, Architecture and Design Documentation
 
 ____________________________________________________________________________________
 
