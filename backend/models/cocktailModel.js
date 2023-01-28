@@ -3,12 +3,6 @@ import mongoose from 'mongoose'
 // Defining the cocktailSchema + associate a user with their saved cocktails
 const cocktailSchema = mongoose.Schema(
 {
-    user: {
-        type: mongoose.Schema.Types.ObjectId, 
-        required: true,
-        ref: 'User'
-    },
-
     name: {
         type: String,
         required: [true, 'Please add a name for your cocktail.'] 
