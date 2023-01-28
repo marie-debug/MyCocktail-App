@@ -1,17 +1,22 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
-const cocktailSchema = mongoose.Schema(
-    {
-        user: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            red: 'User'
-        },
-        cocktail: {
-            type: String,
-            required: [true, 'Please select a cocktail']
-        },
+// Defining the cocktailSchema
+const cocktailSchema = mongoose.Schema({
+    name: {
+        type: String,
+        required: [true, 'Please add a name for your cocktail.'] 
+    },
+    ingredients: {
+        type: String,
+        required: [true, 'Please add your ingredients.'] 
+    },
+    instructions: {
+        type: String,
+        required: [true , 'Please add your instructions.']
     }
-)
+})
 
-module.exports = mongoose.model('Cocktail', cocktailSchema)
+// Defining the cocktail Model
+const CocktailModel = mongoose.model('MyCocktail', cocktailSchema)
+
+export default CocktailModel

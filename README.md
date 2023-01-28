@@ -83,6 +83,18 @@ This reads backend/app.js
 
 <img src="docs/images/mongo/collections.png" width="500">
 
+**Mongo Connected**
+
+Using the package `colors` to display the connection string
+
+<img src="docs/images/mongo/connectDB.png" width="500">
+
+**Post Request**
+
+Successful POST request testing through POSTMAN
+
+<img src="docs/images/img_routes/added_cocktail.png" width="500">
+
 ____________________________________________________________
 
 # Frontend<a name="frontend"></a>

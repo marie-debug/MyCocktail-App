@@ -1,11 +1,15 @@
-import express from 'express';
+import express from 'express'
+import colors from 'colors'
 import {} from 'dotenv/config'
 import cors from 'cors'
 import errorHandler from './middleware/errorMiddleware.js'
-import  cocktailRoutes  from  './routes/cocktail_routes.js'
+import cocktailRoutes  from  './routes/cocktail_routes.js'
 import myCocktailRoute from './routes/myCocktail_routes.js'
+import connectDB from './config/db.js'
 
 const port = process.env.PORT || 3000
+
+connectDB()
 
 const app = express()
 
@@ -19,7 +23,7 @@ app.use('/my/cocktail', myCocktailRoute)
 
 app.use(errorHandler)
 
-app.get('/', (req, res) => res.send('Do you want to play a game?'));
+app.get('/', (req, res) => res.send('Are you ready for a cocktail?'));
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
