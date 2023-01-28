@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
       }
     }
     catch (err) {
-      res.status(500).send({ error: err.message })
+      res.status(500).json({ error: err.message })
     }
   })
 
@@ -28,11 +28,11 @@ router.get('/:id', async (req, res) => {
       if (cocktail) {
         res.send(cocktail)
       } else {
-        res.status(404).send({ error: 'Could not find your cocktail' })
+        res.status(404).json({ error: 'Could not find your cocktail' })
       }
     }
     catch (err) {
-      res.status(500).send({ error: err.message })
+      res.status(500).json({ error: err.message })
     }
   })
 
@@ -44,25 +44,48 @@ router.post('/', async (req, res) => {
         const { name, ingredients, instructions } = req.body
         const newCocktail = {name, ingredients, instructions }
         const addedCocktail = await CocktailModel.create(newCocktail)
-        res.status(200).send(addedCocktail)
+        res.status(200).json(addedCocktail)
     }
     catch (err) {
-        res.status(500).send({ error: err.message })
+        res.status(500).json({ error: err.message })
     }
 })
 
 // @desc    Updated a cocktail
 // @route   PUT /my/cocktail/name
 // @access  Private 
-router.put('/:name', (req, res) => {
-    res.status(200).json({ message: `Update ${req.params.name}` })
+router.put('/:id', async (req, res) => {
+    const { name, ingredients, instructions } = req.body
+    const newCocktail = {name, ingredients, instructions }
+
+    try {
+      const cocktail = await CocktailModel.findByIdAndUpdate(req.params.id, newCocktail, {returnDocument: 'after' })
+      if (cocktail) {
+        res.send(cocktail)
+      } else {
+        res.send(404).json({ error: 'Entry not found' })
+      }
+    }
+    catch (err0r) {
+      res.status(500).json({ error: err.message })
+    }
 })
 
 // @desc    Delete a cocktail
 // @route   DELETE /my/cocktail/name
 // @access  Private 
-router.delete('/:name', (req, res) => {
-    res.status(200).json({ message: `Delete ${req.params.name}` })
+router.delete('/:id', async (req, res) => {
+  try {
+    const cocktail = await CocktailModel.findByIdAndDelete(req.params.id)
+    if (cocktail) {
+      res.sendStatus(204)
+    } else {
+      res.status(404).json({ error: 'Cocktail not found '})
+    }
+  }
+  catch (err) {
+    res.status(500).json({ message: `Deleted ${req.params.name}` })
+  }
 })
 
 
