@@ -50,12 +50,6 @@ router.post('/', async (req, res) => {
         res.status(500).send({ error: err.message })
     }
 })
-//     if(!req.body.text) {
-//         res.status(400)
-//         throw new Error('Please add a text field')
-//     }
-//     res.status(200).json({ message: 'Add a cocktail' })
-// })
 
 // @desc    Updated a cocktail
 // @route   PUT /my/cocktail/name
