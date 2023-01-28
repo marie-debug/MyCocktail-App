@@ -20,13 +20,70 @@ ________________________________________________________________________________
 
 ## Table of Contents
 
-1. [Backend](#backend)
-2. [Frontend](#frontend)
-3. [Project Delivery](#tracking)
+[Backend](#backend)
+
+1. [Packages](#be-packages)
+
+
+[Frontend](#frontend)
+
+[Project Delivery](#tracking)
 
 # Backend<a name="backend"></a>
 
-add information here
+* Added a package.json / package-lock.json folder to ``MyCocktail-App`` 
+* Updated package.json script
+
+To start server from MyCocktail-App
+
+``npm run server`` 
+
+This reads backend/app.js
+
+! Also includes nodemon 
+
+## Packages<a name="be-packages"></a>
+
+* express
+* dotenv
+* mongoose
+* colors
+* nodemon -D
+
+## API Routes
+
+**Function:** Ability to add your own cocktails to your list (My Cocktails - Favourites). This includes the ability to see all cocktails in the list, add a new cocktail, update an existing cocktail and delete one from the list. (CRUD functionality)
+
+**Route Folder:**  myCocktail_routes.js
+
+**GET** http://localhost:3000/my/cocktail
+
+**POST** http://localhost:3000/my/cocktail
+
+**PUT** http://localhost:3000/my/cocktail/name
+
+**DELETE** http://localhost:3000/my/cocktail/name
+
+## Testing Screenshots of Routes
+
+<img src="docs/images/img_routes/get_cocktail.png" width="200">
+<img src="docs/images/img_routes/post_cocktail.png" width="200">
+<img src="docs/images/img_routes/put_cocktail.png" width="200">
+<img src="docs/images/img_routes/delete_cocktail.png" width="200">
+
+## Mongo Atlas
+
+**Project Name:** MyCocktail-App
+
+**Cluster Name:** MyCocktail-App
+
+**Collections:** 
+1. my-cocktails
+2. users
+
+<img src="docs/images/mongo/collections.png" width="500">
+
+____________________________________________________________
 
 # Frontend<a name="frontend"></a>
 
