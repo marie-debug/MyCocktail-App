@@ -5,6 +5,7 @@ import cors from 'cors'
 import errorHandler from './middleware/errorMiddleware.js'
 import cocktailRoutes  from  './routes/cocktail_routes.js'
 import myCocktailRoute from './routes/myCocktail_routes.js'
+import UserRoute from './routes/user_routes.js'
 import connectDB from './config/db.js'
 
 const port = process.env.PORT || 3000
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/cocktails',cocktailRoutes)
 app.use('/my/cocktail', myCocktailRoute)
+app.use('/user', UserRoute)
 
 app.use(errorHandler)
 

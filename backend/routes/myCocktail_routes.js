@@ -3,7 +3,6 @@ import CocktailModel from '../models/cocktailModel.js'
 
 const router = express.Router()
 
-
 // @desc    Get a cocktail
 // @route   GET /my/cocktail
 // @access  Private 
