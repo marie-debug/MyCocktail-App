@@ -1,5 +1,4 @@
 import express from 'express'
-// import { getMyCocktail } from '../controllers/myCocktailController'
 import CocktailModel from '../models/cocktailModel.js'
 
 const router = express.Router()
