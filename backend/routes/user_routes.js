@@ -11,40 +11,46 @@ const router = express.Router()
 router.post('/register', async (req, res) =>{
     const { name, email, password } = req.body
 
-    if (!name || !email || !password) {
-        res.status(400)
-        throw new Error('Please add all fields to register.')
-    }
+    try {
+        const register = await UserModel.find()
 
-    // Check if the user exists
-    const userExists = await User.findOne({email})
+        if (!register) {
+            res.status(!register)
+        } else {
+            res.status(404).send('Please add all fields to register.')
+        }
 
-    if (userExists) {
-        res.status(400)
-        throw new Error('User already exists')
-    }
+        // Check if the user exists
+        const userExists = await User.findOne({email})
+        if (userExists) {
+            res.status(400)
+        } else {
+            res.status(404).send('User already exists')
+        }
 
-    // Hash the password
-    const salt = await bcrypt.genSalt(10)
-    const hashedPassword = await bcrypt.hash(password, salt)
+        // Hash the password
+        const salt = await bcrypt.genSalt(10)
+        const hashedPassword = await bcrypt.hash(password, salt)
 
-    // Create user
-    const user = await User.create({
-        name, 
-        email, 
-        password: hashedPassword
-    })
-
-    if (user) {
-        res.status(201).json({
-            _id: user.id, 
-            name: user.name,
-            email: user.email,
-            token: generateToken(user._id)
+        // Create user
+        const user = await User.create({
+            name, 
+            email, 
+            password: hashedPassword
         })
-    } else {
-        res.status(400)
-        throw new Error('Invalid user data')
+
+        if (user) {
+            res.status(201).json({
+                _id: user.id, 
+                name: user.name,
+                email: user.email,
+                token: generateToken(user._id)
+            })
+        } else {
+        res.status(400).send('Invalid user data')
+        }
+    } catch (err) {
+        res.status(500).send('Please add all fields to register.')
     }
 })
 
@@ -58,16 +64,21 @@ router.post('/login', async (req, res) => {
     // Check for user email
     const user = await User.findOne({ email })
 
-    if (user && (await bcrypt.compare(password, user.password))) {
-        res.json({
-            _id: user.id, 
-            name: user.name,
-            email: user.email,
-            token: generateToken(user._id)
-        })
-    } else {
-        res.status(400)
-        throw new Error('Invalid credentails')
+    try {
+        if (user && (await bcrypt.compare(password, user.password))) {
+            res.json({
+                _id: user.id, 
+                name: user.name,
+                email: user.email,
+                token: generateToken(user._id)
+            })
+        } else {
+            res.status(400)
+            throw new Error('Invalid credentails')
+        }
+    } 
+    catch (err) {
+        res.status(500).send({ error: err.message }) 
     }
 })
 
@@ -81,7 +92,7 @@ router.get('/me', async (req, res) => {
 // Generate JWT
 const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, {
-        expiresIn: '30d',
+        expiresIn: '1d',
     })
 }
 
