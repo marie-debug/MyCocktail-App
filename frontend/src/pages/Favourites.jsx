@@ -1,4 +1,4 @@
-// My Favourite Cocktails saved page
+// My Favourite Cocktails saved page and Add a cocktail
 
 function Favourites() {
   return (
