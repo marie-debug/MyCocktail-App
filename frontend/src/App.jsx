@@ -23,7 +23,7 @@ function App() {
             <Route path='/cocktail' element={<Cocktail />} />
             <Route path='/favourites' element={<Favourites />} />
             <Route path='/cocktailList' element={<CocktailList />} />
-            <Route path='*' element={<Error />} />
+            <Route path='/error' element={<Error />} />
           </Routes>
           <Footer />
         </div>
