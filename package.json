@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node backend/app.js",
     "server": "nodemon backend/app.js",
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/marie-debug/MyCocktail-App#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",
@@ -31,6 +33,7 @@
     "mongoose": "^6.9.0"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "nodemon": "^2.0.20"
   }
 }
