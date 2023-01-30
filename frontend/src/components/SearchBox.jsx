@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaSearch } from 'react-icons/fa'
 
 const searchbox = ({searchChange}) => {
 
@@ -10,7 +9,7 @@ const searchbox = ({searchChange}) => {
                 type='search' 
                 className='form-group'
                 placeholder = 'Search for your favourite cocktail by name or alcohol..'
-                onChange={searchChange}/> 
+                onChange={searchChange}/>
         </div>
   )
 }
