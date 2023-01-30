@@ -1,10 +1,29 @@
-// My Favourite Cocktails saved page and Add a cocktail
-// import { useState, useEffect } from 'react'
-// import CocktailForm from '../components/CocktailForm'
-// import Spinner from '../components/Spinner'
+import React, { useEffect, useState } from "react";
+import BackToSearch from '../components/BackToSearch'
 
 
 function Favourites() {
+  const [cocktailData, setCocktailData] = useState(null)
+  const fetchData = () => {
+ try{
+    fetch('http://localhost:3000/my/cocktail')
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+       { setCocktailData(data)}
+      })
+  }catch(error){
+    console.log('Error: ', error)
+  }}
+
+
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+
   return (
       <>
         <section className='content'>
@@ -13,10 +32,29 @@ function Favourites() {
         </section>
 
         <section className='content'>
-          {/* <CocktailForm /> */}
+        <ul>
+        { Array.isArray(cocktailData) && cocktailData.length ?
+            
+          cocktailData.map((data) => (
+          
+            <li key={data._id}>
+              <h3>{data.name}</h3>
+              <p>Instructions: {data.instructions}</p>
+              <p>Ingredients: {data.ingredients}</p>
+            </li>
+          )): (
+          <>
+            <p>No content has been added yet! </p>
+            <p>Search and add a cocktail to your favourites!</p>
+            
+            </>
+          )
+        
+        }
+      </ul>
         </section>
       </>
     )
+  
   }
-
 export default Favourites

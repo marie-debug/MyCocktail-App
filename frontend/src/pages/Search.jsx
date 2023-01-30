@@ -1,7 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import SearchBox from '../components/SearchBox'
 
-import { Link } from "react-router-dom" 
 import { useNavigate } from "react-router-dom"
 
 function Search() {
@@ -21,8 +20,7 @@ function Search() {
 const navigate = useNavigate()
 
 const onClickHandler = (searchText) => navigate(`/cocktailList?searchtext=${searchText}`)
-console.log()
-console.log(searchField)
+
 
  return (
   <>

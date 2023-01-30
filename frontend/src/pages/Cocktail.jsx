@@ -4,10 +4,10 @@ const Cocktail =({cocktail})=>{
 
 function saveCocktail(cocktail){
   //TODO Get actual user ID from cookie session
-  const userID = 'bvnvmgvjhvmjv'
+  const userID = 1234
 
-  favouriteCocktail ={ 
-    "userID": userID,
+  let favouriteCocktail ={ 
+    "id": userID,
     "name":cocktail.name , 
     "ingredients":cocktail.ingredients,
     "instructions":cocktail.instructions
@@ -27,7 +27,7 @@ function saveCocktail(cocktail){
       })
 
  
-  //TODO Call create function that saves cocktail and user to mongodb
+  
 }
 
   return (

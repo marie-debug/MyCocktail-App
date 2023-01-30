@@ -1,6 +1,7 @@
 // List of cocktails available to display from the API
 import React, { useEffect, useState } from "react";
 import {useSearchParams } from 'react-router-dom';
+import BackToSearch from "../components/BackToSearch";
 import Cocktail from './Cocktail'
 import { Link } from 'react'
 import SearchAgain from '../components/SearchAgain'
@@ -12,7 +13,7 @@ const  CocktailList= ()=> {
   let searchText = searchParams.get("searchtext")
   
   const fetchData = () => {
- 
+    try{
     fetch(`http://localhost:3000/cocktails/${searchText}`)
       .then(response => {
         return response.json()
@@ -20,6 +21,9 @@ const  CocktailList= ()=> {
       .then(data => {
        {setCocktails(data)}
       })
+    }catch(error){
+      console.log('Error: ', error)
+    }
   }
 
   useEffect(() => {
@@ -35,12 +39,18 @@ const  CocktailList= ()=> {
 
       {cocktails.map((cocktail) => {
           return (
-            <Cocktail cocktail={cocktail}/>
+            
+            <Cocktail cocktail={cocktail}/>          
       )
           }
      
       )}
+ user-id
+
+       
+
       <SearchAgain />
+main
   </>
   )
 }
