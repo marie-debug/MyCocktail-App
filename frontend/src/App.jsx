@@ -9,13 +9,14 @@ import Favourites from './pages/Favourites'
 import CocktailList from './pages/CocktailList'
 import Error from './pages/Error'
 import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
 
 
 function App() {
   
 
   return (
-    <>
+    <ErrorBoundary>
       <Router>
         <div className='container'>
           <Header />
@@ -31,7 +32,7 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </>
+      </ErrorBoundary>
   )
 }
 

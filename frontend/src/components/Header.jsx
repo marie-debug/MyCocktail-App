@@ -14,7 +14,7 @@ const Header = () => {
             </button>
             <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
             <div className="offcanvas-header">
-              <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav">
@@ -27,19 +27,10 @@ const Header = () => {
                 <li className="nav-item">
                   <Link className="nav-link" to="/cocktail-list"><FaCocktail />Cocktail List</Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/results">Results</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/cocktail">Cocktail</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/error">Error</Link>
-                </li>
               </ul>
             </div>
           </div>
-            <Link className="navbar-brand" to='/' >My Cocktail</Link>
+            <Link className="navbar-brand" to='/'>My Cocktail</Link>
           </div>
         </div>
       </nav>
