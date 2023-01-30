@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import {useSearchParams } from 'react-router-dom';
 import Cocktail from './Cocktail'
+import { Link } from 'react'
+import SearchAgain from '../components/SearchAgain'
 
 const  CocktailList= ()=> {
 
@@ -30,6 +32,7 @@ const  CocktailList= ()=> {
         <h1>Keep Calm and drink a cocktail</h1>
         <p>Browse through our list of cocktails</p>
       </section>
+
       {cocktails.map((cocktail) => {
           return (
             <Cocktail cocktail={cocktail}/>
@@ -37,6 +40,7 @@ const  CocktailList= ()=> {
           }
      
       )}
+      <SearchAgain />
   </>
   )
 }
