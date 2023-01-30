@@ -20,39 +20,68 @@ ________________________________________________________________________________
 
 ## Table of Contents
 
+[Run Scripts](#scripts)
+
+[Packages](#packages)
+
 [Backend](#backend)
-
-1. [Packages](#be-packages)
-
+- [API Routes](#api)
+- [Mongo - Atlas](#mongo)
 
 [Frontend](#frontend)
 
 [Project Delivery](#tracking)
 
-# Backend<a name="backend"></a>
+# Run Scripts<a name="scripts"></a>
 
-* Added a package.json / package-lock.json folder to ``MyCocktail-App`` 
-* Updated package.json script
+To start the backend and frontend, run the following commands. 
 
-To start server from MyCocktail-App
+**Folder: MyCocktail-App**
 
-``npm run server`` 
+Backend
 
-This reads backend/app.js
+``npm run backend``
 
-! Also includes nodemon 
+**Note:** Includes nodemon 
 
-## Packages<a name="be-packages"></a>
+Example of Backend Script running:
+
+<img src="docs/images/be_script.png" width="200">
+
+
+Frontend
+
+``npm run frontend``
+
+Example of Frontend Script running: 
+
+<img src="docs/images/fe_script.png" width="200">
+
+
+## Packages<a name="packages"></a>
+
+**Backend Packages**
 
 * express
 * dotenv
 * mongoose
-* colors
 * nodemon -D
 
-## API Routes
+**Frontend Packages**
 
-**Function:** Ability to add your own cocktails to your list (My Cocktails - Favourites). This includes the ability to see all cocktails in the list, add a new cocktail, update an existing cocktail and delete one from the list. (CRUD functionality)
+* vite
+* .dotenv
+* react-router-dom
+* react-icons
+* axios
+* toastify
+* boostrap
+
+# Backend <a name="backend"></a>
+
+## API Routes<a name="api"></a>
+
+**Function:** Ability to save a cocktail to your list (Favourites). This includes the ability to see all cocktails in the list, add a new cocktail, update an existing cocktail and delete one from the list. (CRUD functionality)
 
 **Route Folder:**  myCocktail_routes.js
 
@@ -71,7 +100,7 @@ This reads backend/app.js
 <img src="docs/images/img_routes/put_cocktail.png" width="200">
 <img src="docs/images/img_routes/delete_cocktail.png" width="200">
 
-## Mongo Atlas
+## Mongo Atlas<a name="mongo"></a>
 
 **Project Name:** MyCocktail-App
 
@@ -79,15 +108,9 @@ This reads backend/app.js
 
 **Collections:** 
 1. my-cocktails
-2. users
+2. users (tba)
 
 <img src="docs/images/mongo/collections.png" width="500">
-
-**Mongo Connected**
-
-Using the package `colors` to display the connection string
-
-<img src="docs/images/mongo/connectDB.png" width="500">
 
 **Post Request**
 
@@ -99,29 +122,6 @@ ____________________________________________________________
 
 # Frontend<a name="frontend"></a>
 
-## Packages
-
-Packages used for the Frontend
-
-* vite
-* .dotenv
-* react-router-dom
-* react-icons
-* axios
-* toastify
-* boostrap
-
-
-## To run the frontend
-
-```
-cd frontend
-
-npm install
-
-npm run dev
-
-```
 
 # Project Delivery<a name="tracking"></a>
 
