@@ -1,5 +1,4 @@
 import React, {useState,useEffect} from 'react';
-import { FaWineBottle, FaCocktail, FaSearch } from 'react-icons/fa'
 import SearchBox from '../components/SearchBox'
 
 import { Link } from "react-router-dom" 
