@@ -6,13 +6,13 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <nav class="navbar navbar-dark" aria-label="Dark offcanvas navbar">
+      <nav className="navbar navbar-dark" aria-label="Dark offcanvas navbar">
         <div className="container-fluid">
           <div className="navbar-header">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
-              <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark">
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
+            <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasNavbarDark" aria-labelledby="offcanvasNavbarDarkLabel">
             <div className="offcanvas-header">
               <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>

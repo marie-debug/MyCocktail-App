@@ -1,14 +1,18 @@
 import mongoose from 'mongoose'
 
 // Defining the cocktailSchema + associate a user with their saved cocktails
-const cocktailSchema = mongoose.Schema(
+const CocktailSchema = new mongoose.Schema(
 {
     name: {
         type: String,
         required: [true, 'Please add a name for your cocktail.'] 
     },
+    id : {
+        type: Number,
+        required: [true, 'Please add id.'] },
+
     ingredients: {
-        type: String,
+        type: Array,
         required: [true, 'Please add your ingredients.'] 
     },
     instructions: {
@@ -18,6 +22,6 @@ const cocktailSchema = mongoose.Schema(
 })
 
 // Defining the cocktail Model
-const CocktailModel = mongoose.model('MyCocktail', cocktailSchema)
+const CocktailModel = mongoose.model('MyCocktail', CocktailSchema)
 
 export default CocktailModel
