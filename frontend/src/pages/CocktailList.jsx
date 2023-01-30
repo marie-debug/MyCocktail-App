@@ -1,6 +1,7 @@
 // List of cocktails available to display from the API
 import React, { useEffect, useState } from "react";
 import {useSearchParams } from 'react-router-dom';
+import Cocktail from './Cocktail'
 
 const  CocktailList= ()=> {
 
@@ -23,10 +24,6 @@ const  CocktailList= ()=> {
     fetchData()
   }, [])
 
- 
-
- 
-
   return (
     <>
    <section className='content'>
@@ -35,11 +32,7 @@ const  CocktailList= ()=> {
       </section>
       {cocktails.map((cocktail) => {
           return (
-            <>
-        <h2> {cocktail.name}</h2>
-        <p>Instructions: {cocktail.instructions}</p>
-        <p>Ingredients: {cocktail.ingredients}</p>
-        </>
+            <Cocktail cocktail={cocktail}/>
       )
           }
      
