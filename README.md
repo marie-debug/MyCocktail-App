@@ -32,6 +32,8 @@ ________________________________________________________________________________
 
 [Project Delivery](#tracking)
 
+[Unit Testing](#testing)
+
 # Run Scripts<a name="scripts"></a>
 
 To start the backend and frontend, run the following commands. 
@@ -157,3 +159,28 @@ ____________________________________________________________
 <img src="docs/images/design_inspiration.png" width="300">
 
 <img src="docs/images/dt_day5.png" width="300">
+
+__________________________________________________________________
+
+# Unit Testing<a name="testing"></a>
+
+Since the Frontend was built with vite, testing is using vitest. 
+
+**Packages**
+
+* vitest
+* jsdom
+* @testing-library/react
+* @testing-library/react-hooks / --legacy-peer-deps
+* @testing-library/user-event
+* @testing-library/jest-dom 
+
+Note: Installed as Development dependencies
+
+``npm i -D ...``
+
+Websites:
+
+* https://vitest.dev/
+* https://testing-library.com/docs/react-testing-library/intro/
+
