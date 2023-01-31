@@ -6,7 +6,7 @@ function Favourites() {
   const [cocktailData, setCocktailData] = useState(null)
   const fetchData = () => {
  try{
-    fetch('http://localhost:3000/my/cocktail')
+    fetch(`${process.env.BACKEND_API}/my/cocktail`)
       .then(response => {
         return response.json()
       })

@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import {useSearchParams } from 'react-router-dom';
 import Cocktail from './Cocktail'
 import SearchAgain from '../components/SearchAgain'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 const  CocktailList= ()=> {
 
@@ -12,7 +15,7 @@ const  CocktailList= ()=> {
   
   const fetchData = () => {
     try{
-    fetch(`http://localhost:3000/cocktails/${searchText}`)
+    fetch(`${process.env.BACKEND_API}cocktails/${searchText}`)
       .then(response => {
         return response.json()
       })
