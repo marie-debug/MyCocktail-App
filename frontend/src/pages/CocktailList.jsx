@@ -5,14 +5,15 @@ import Cocktail from './Cocktail'
 import SearchAgain from '../components/SearchAgain'
 
 const  CocktailList= ()=> {
-
+   
   const [cocktails, setCocktails] = useState([])
   let [searchParams, setSearchParams] = useSearchParams();
   let searchText = searchParams.get("searchtext")
   
   const fetchData = () => {
+    
     try{
-    fetch(`http://localhost:3000/cocktails/${searchText}`)
+    fetch(`${import.meta.env.VITE_BACKEND_API}/cocktails/${searchText}`)
       .then(response => {
         return response.json()
       })
