@@ -10,7 +10,8 @@
     "frontend": "cd frontend && vite",
     "build": "cd frontend && vite build",
     "preview": "cd frontend && vite preview",
-    "backend": "nodemon backend/app.js"
+    "backend": "nodemon backend/app.js",
+    "start": "app.js"
   },
   "repository": {
     "type": "git",
