@@ -8,7 +8,6 @@
   },
   "scripts": {
    "frontend":"cd frontend && npx http-server ./dist",
-    "frontend-dev":"cd frontend && vite",
     "build":"cd frontend && vite build",
     "preview":"cd frontend && vite preview",
     "backend":"nodemon backend/app.js",
