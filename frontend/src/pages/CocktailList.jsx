@@ -3,19 +3,17 @@ import React, { useEffect, useState } from "react";
 import {useSearchParams } from 'react-router-dom';
 import Cocktail from './Cocktail'
 import SearchAgain from '../components/SearchAgain'
-import * as dotenv from 'dotenv'
-
-dotenv.config()
 
 const  CocktailList= ()=> {
-
+   
   const [cocktails, setCocktails] = useState([])
   let [searchParams, setSearchParams] = useSearchParams();
   let searchText = searchParams.get("searchtext")
   
   const fetchData = () => {
+    
     try{
-    fetch(`${process.env.BACKEND_API}cocktails/${searchText}`)
+    fetch(`${import.meta.env.VITE_BACKEND_API}cocktails/${searchText}`)
       .then(response => {
         return response.json()
       })
