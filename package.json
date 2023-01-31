@@ -9,7 +9,7 @@
   "scripts": {
    "frontend":"cd frontend && npx http-server ./dist",
     "build":"cd frontend && vite build",
-    "preview":"cd frontend && vite preview",
+    "preview":"cd frontend && vite preview --host",
     "backend":"nodemon backend/app.js",
     "test":"vitest"
 
