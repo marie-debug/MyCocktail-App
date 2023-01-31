@@ -179,6 +179,25 @@ Note: Installed as Development dependencies
 
 ``npm i -D ...``
 
+**Configuration**
+
+* Add test information to vite.config.js
+
+<img src="docs/images/testing/vite_setup.png" width="300">
+
+* Updated package.json script
+
+Under scripts
+
+``"test":"vitest"``
+
+* To test run 
+
+``npm text ``
+
+<img src="docs/images/testing/npm_test.png" width="300">
+
+
 Websites:
 
 * https://vitest.dev/
