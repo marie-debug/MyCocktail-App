@@ -3,7 +3,7 @@
 function ErrorFallback() {
 
   return (
-  <div class="main-error-page">
+  <div className="main-error-page">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -107,7 +107,7 @@ function ErrorFallback() {
           />
         </g>
         <path
-          class="fio-500"
+          className="fio-500"
           stroke="#2D3F5B"
           stroke-linecap="round"
           stroke-width="4"
@@ -121,7 +121,7 @@ function ErrorFallback() {
             <use xlinkHref="#prefix__m" />
           </mask>
           <path
-                 class="fio"
+                 className="fio"
             fill="#4B4B62"
             d="M-5.969 9.929L24.38 9.929 24.38 -5.973 -5.969 -5.973z"
             mask="url(#prefix__n)"
@@ -339,7 +339,7 @@ function ErrorFallback() {
   <h1 class="error-title">
     Woops! <br/>Something went wrong :(
   </h1>
-  <h2 class="error-subtitle">
+  <h2 className="error-subtitle">
    Have you tried turning it off and on again?
   </h2>
 </div>)
