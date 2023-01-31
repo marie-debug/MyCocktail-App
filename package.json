@@ -11,7 +11,8 @@
     "build": "cd frontend && vite build",
     "preview": "cd frontend && vite preview",
     "backend": "nodemon backend/app.js",
-    "start": "app.js"
+    "start": "concurrently \"cd frontend && vite\" \"nodemon backend/app.js\""
+
   },
   "repository": {
     "type": "git",
