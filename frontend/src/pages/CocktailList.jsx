@@ -13,7 +13,7 @@ const  CocktailList= ()=> {
   const fetchData = () => {
     
     try{
-    fetch(`${import.meta.env.VITE_BACKEND_API}cocktails/${searchText}`)
+    fetch(`${import.meta.env.VITE_BACKEND_API}/cocktails/${searchText}`)
       .then(response => {
         return response.json()
       })
