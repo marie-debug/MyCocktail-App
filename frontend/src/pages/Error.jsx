@@ -1,5 +1,5 @@
 import { FaSadCry } from "react-icons/fa"
-import { Link } from "react-router-dom"
+
 import SearchAgain from '../components/SearchAgain'
 
 function Error() {

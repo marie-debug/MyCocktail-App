@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import BackToSearch from '../components/BackToSearch'
+import SearchAgain from '../components/SearchAgain'
 
 
 function Favourites() {
@@ -48,10 +48,10 @@ function Favourites() {
             <p>Search and add a cocktail to your favourites!</p>
             
             </>
-          )
-        
+          )      
         }
       </ul>
+      <SearchAgain />
         </section>
       </>
     )
