@@ -7,7 +7,7 @@
     "doc":"docs"
   },
   "scripts": {
-
+    "install":"npm ci --omit=dev",
     "frontend":"cd frontend && vite",
     "build":"cd frontend && vite build",
     "preview":"cd frontend && vite preview",
