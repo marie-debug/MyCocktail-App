@@ -47,6 +47,7 @@ h3 {
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -83,9 +84,6 @@ h3 {
 
 .offcanvas-header {
   background: #183230;
-}
-.btn {
-  color: #fff;
 }
 
 .offcanvas-body {
@@ -129,12 +127,25 @@ h3 {
   font-size: 1.5rem;
 }
 
+.fontAwesome {
+  font-family: Helvetica, 'FontAwesome', sans-serif;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   height: 100px;
   width: 100px;
   background: #FAEFEE;
   margin: 15px;
+}
+
+.card-cocktail {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: auto;
+  width: auto;
+  background: #FAEFEE;
+  margin: 15px;
+  padding: 20px;
 }
 
 .form,

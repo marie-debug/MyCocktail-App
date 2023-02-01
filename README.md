@@ -37,6 +37,8 @@ ________________________________________________________________________________
 
 [Project Delivery](#tracking)
 
+[Unit Testing](#testing)
+
 # Run Scripts<a name="scripts"></a>
 
 To start the backend and frontend, run the following commands. 
@@ -163,14 +165,57 @@ ____________________________________________________________
 
 <img src="docs/images/dt_day5.png" width="300">
 
+readme-b
 __________________________________________________________________________
 
 **Week 2 - Day 3**
 
-* Marion successful deployed the app to Railway! https://mycocktail.up.railway.app/
+* successfully deployed the app to Railway! https://mycocktail.up.railway.app/
 * Review status/ requirements in Trello - update the board 
 * Review user functionality and set next tasks 
 * Unit Testing - vitest / jsdom 
 * Production testing
 
+__________________________________________________________________
+
+# Unit Testing<a name="testing"></a>
+
+Since the Frontend was built with vite, testing is using vitest. 
+
+**Packages**
+
+* vitest
+* jsdom
+* @testing-library/react
+* @testing-library/react-hooks / --legacy-peer-deps
+* @testing-library/user-event
+* @testing-library/jest-dom 
+
+Note: Installed as Development dependencies
+
+``npm i -D ...``
+
+**Configuration**
+
+* Add test information to vite.config.js
+
+<img src="docs/images/testing/vite_setup.png" width="300">
+
+* Updated package.json script
+
+Under scripts
+
+``"test":"vitest"``
+
+* To test run 
+
+``npm text ``
+
+<img src="docs/images/testing/npm_test.png" width="300">
+
+
+Websites:
+
+* https://vitest.dev/
+* https://testing-library.com/docs/react-testing-library/intro/
 

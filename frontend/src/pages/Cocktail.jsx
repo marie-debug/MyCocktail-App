@@ -4,10 +4,10 @@ const Cocktail =({cocktail})=>{
 
 function saveCocktail(cocktail){
   //TODO Get actual user ID from cookie session
-  const userID = 'bvnvmgvjhvmjv'
+  const userID = 1234
 
-  favouriteCocktail ={ 
-    "userID": userID,
+  let favouriteCocktail ={ 
+    "id": userID,
     "name":cocktail.name , 
     "ingredients":cocktail.ingredients,
     "instructions":cocktail.instructions
@@ -27,20 +27,22 @@ function saveCocktail(cocktail){
       })
 
  
-  //TODO Call create function that saves cocktail and user to mongodb
+  
 }
 
   return (
     <>
-      <section className='content'>
-      
-        <h2> {cocktail.name}</h2>
-        <p>Instructions: {cocktail.instructions}</p>
-        <p>Ingredients: {cocktail.ingredients}</p>
-
-        <div class="d-flex justify-content-center ">
-        <button type='submit' className='btn btn-warning .button1' onClick={()=>{saveCocktail(cocktail)}}>Save to Favorites</button>
-        </div>
+      <section className='container'>
+        <section className='card-cocktail'>
+          <h2>{cocktail.name.toUpperCase()}</h2>
+          <span style={{ fontWeight: 'bold' }}>Ingredients:</span>
+          <p>{cocktail.ingredients.join(',\n')}</p>
+          <span style={{ fontWeight: 'bold' }}>Instructions:</span>
+          <p>{cocktail.instructions}</p>
+          <div class="d-flex justify-content-center ">
+          <button type='submit' className='btn btn-warning .button1' onClick={()=>{saveCocktail(cocktail)}}>Save to Favorites</button>
+          </div>
+        </section>
       </section>
     </>
   )

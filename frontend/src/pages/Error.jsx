@@ -1,5 +1,6 @@
 import { FaSadCry } from "react-icons/fa"
-import { Link } from "react-router-dom"
+
+import SearchAgain from '../components/SearchAgain'
 
 function Error() {
   return (
@@ -11,9 +12,7 @@ function Error() {
               <FaSadCry size="4rem" color="#CCA79D"/>
             </div>
         </section>
-        <div class="row justify-content-center">
-          <button type='submit' className='btn btn-warning'><Link to="/">Take me Home</Link></button>
-        </div>
+        <SearchAgain />
     </>
   )
 }
