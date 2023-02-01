@@ -209,7 +209,7 @@ Under scripts
 
 * To test run 
 
-``npm text ``
+``npm test ``
 
 <img src="docs/images/testing/npm_test.png" width="300">
 
