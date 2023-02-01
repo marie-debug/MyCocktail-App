@@ -26,6 +26,7 @@ function Favourites() {
 
   return (
       <>
+        <div className='container'>
         <section className='content'>
           <h1>My favourites</h1>
           <p>Here's to alcohol, the rose colored glasses of life!</p>
@@ -53,6 +54,7 @@ function Favourites() {
       </ul>
       <SearchAgain />
         </section>
+        </div>
       </>
     )
   
