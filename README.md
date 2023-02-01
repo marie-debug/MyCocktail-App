@@ -10,11 +10,16 @@ ________________________________________________________________________________
 
 **Important Links**
 
+[Railway Deployment](https://mycocktail.up.railway.app/) - My Cocktail App in Production
+
+[GitHub Repository](https://github.com/marie-debug/MyCocktail-App) 
+
 [Trello](https://trello.com/invite/b/bGaDJxU8/ATTI8ede4dc9eb69ccd7f3c83fc1213fe4b54F7075F6/t3a2-mern-app-part-a) - Product Delivery (Board is Public)
 
 [Miro](https://miro.com/app/board/uXjVPzbXD88=/) - Virtual Whiteboard for Team Collaboration (Anyone with link can view)
 
 [README.md Part-A](/docs/part-a/README.md) - Analysis, Architecture and Design Documentation
+
 
 ____________________________________________________________________________________
 
@@ -129,7 +134,7 @@ ____________________________________________________________
 
 ## Trello Screenshots
 
-**Day 1**
+**Week 1: Day 1**
 
 * Start with a Team catch up 
 * Create a Repository
@@ -159,6 +164,17 @@ ____________________________________________________________
 <img src="docs/images/design_inspiration.png" width="300">
 
 <img src="docs/images/dt_day5.png" width="300">
+
+readme-b
+__________________________________________________________________________
+
+**Week 2 - Day 3**
+
+* successfully deployed the app to Railway! https://mycocktail.up.railway.app/
+* Review status/ requirements in Trello - update the board 
+* Review user functionality and set next tasks 
+* Unit Testing - vitest / jsdom 
+* Production testing
 
 __________________________________________________________________
 
