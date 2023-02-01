@@ -58,7 +58,6 @@ h3 {
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
   background: #183230;
-  border-radius: 10px;
 }
 
 .navbar-header {
@@ -176,16 +175,17 @@ h3 {
 
 .container-footer {
     width: 100%;
-    max-width: 960px;
     margin-top: auto;
     padding: 5px 20px;
     text-align: center;
     background: #183230;
-    border-radius: 10px;
 }
 
 .footer-p {
   padding-top: 8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
 .btn {
@@ -215,28 +215,6 @@ h3 {
 
 .btn:hover {
   transform: scale(0.98);
-}
-
-.loadingSpinnerContainer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loadingSpinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
-  border-color: #000 transparent #555 transparent;
-  border-radius: 50%;
-  animation: spin 1.2s linear infinite;
 }
 
 #cry {

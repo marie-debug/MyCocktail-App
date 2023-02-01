@@ -7,7 +7,7 @@
     "doc":"docs"
   },
   "scripts": {
-   "frontend":"cd frontend && npx http-server ./dist",
+   "frontend":"cd frontend && vite",
     "build":"cd frontend && vite build",
     "preview":"cd frontend && vite preview --host",
     "backend":"nodemon backend/app.js",
