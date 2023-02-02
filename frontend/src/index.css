@@ -29,7 +29,7 @@ li {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h1,
@@ -216,8 +216,8 @@ h3 {
 }
 
 img {
-  max-width: 100%;
-  width: 700px;  
+  height: auto;
+  max-width: 100%; 
   margin: 10px;
 }
 
