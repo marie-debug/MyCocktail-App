@@ -36,16 +36,21 @@ const  CocktailList= ()=> {
         <p>Browse through our list of cocktails</p>
       </section>
 
-      {cocktails.map((cocktail) => {
+      {Array.isArray(cocktails) && cocktails.length ?
+      
+      cocktails.map((cocktail) => {
           return (
-            
-            <Cocktail cocktail={cocktail}/>          
-      )
+            <Cocktail cocktail={cocktail}/>
+            )
           }
      
-      )}     
+      )  : (
+        <>
+          <p>Ow it seems we can't find a cocktail for you please search again ..</p>
+        </>
+      )}    
 
-      <SearchAgain />
+      <SearchAgain/>
 
   </>
   )
