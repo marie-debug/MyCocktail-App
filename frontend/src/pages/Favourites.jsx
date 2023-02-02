@@ -28,7 +28,6 @@ function Favourites() {
   }, []);
 
   return (
-
      
     <>
       <Container fluid className="card-cocktail">
