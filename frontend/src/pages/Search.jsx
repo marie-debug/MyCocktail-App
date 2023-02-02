@@ -24,18 +24,16 @@ const onClickHandler = (searchText) => navigate(`/cocktailList?searchtext=${sear
 
  return (
   <>
-    <div className='container'>
-      <section className='heading'>
-        <h1>It's cocktail hour!</h1>
-        <p>It's that easy to search your perfect cocktail.</p>
+    <section className='heading'>
+      <h1>It's cocktail hour!</h1>
+      <p>It's that easy to search your perfect cocktail.</p>
 
-        <SearchBox searchChange={onSearchChange}/>
-        <div class="row justify-content-center">
-          <button type='submit' className='btn btn-warning' onClick ={()=>{onClickHandler(searchField)}}>Search</button>
-          
-        </div>
-      </section>
-    </div>
+      <SearchBox searchChange={onSearchChange}/>
+      <div class="row justify-content-center">
+        <button type='submit' className='btn btn-warning' onClick ={()=>{onClickHandler(searchField)}}>Search</button>
+        
+      </div>
+    </section>
 
     
   </>
