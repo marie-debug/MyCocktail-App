@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaHome, FaCocktail, FaGrinHearts } from 'react-icons/fa'
+import { FaHome, FaCocktail } from 'react-icons/fa'
 
 
 const Header = () => {
@@ -22,10 +22,7 @@ const Header = () => {
                   <Link className="nav-link active" aria-current="page" to="/"><FaHome />Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/favourites"><FaGrinHearts />Favourites</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/cocktail-list"><FaCocktail />Cocktail List</Link>
+                  <Link className="nav-link" to="/favourites"><FaCocktail />Favourites</Link>
                 </li>
               </ul>
             </div>
