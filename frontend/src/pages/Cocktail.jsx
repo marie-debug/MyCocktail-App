@@ -36,7 +36,9 @@ function saveCocktail(cocktail){
         <section className='card-cocktail'>
           <h2>{cocktail.name.toUpperCase()}</h2>
           <span style={{ fontWeight: 'bold' }}>Ingredients:</span>
-          <p>{cocktail.ingredients.join(',\n')}</p>
+          <p>{cocktail.ingredients.map((ingred) => (
+                  <ol>{ingred}</ol>
+                ))}</p>
           <span style={{ fontWeight: 'bold' }}>Instructions:</span>
           <p>{cocktail.instructions}</p>
           <div class="d-flex justify-content-center ">

@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button'
 
 export const SearchAgain = () => {
   return (
-    <div class="row justify-content-center">
-        <button type='submit' className='btn btn-warning'><Link to="/">Search Again</Link></button>
+    <div className="d-flex justify-content-center">
+        <Button variant="warning"><Link to="/">Search Again</Link></Button>
     </div>
   )
 }
