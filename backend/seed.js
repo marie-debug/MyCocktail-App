@@ -1,17 +1,21 @@
-import {CocktailModel, dbClose } from './db.js'
+import {dbClose } from './db.js'
+import {CocktailModel} from './models/cocktailModel.js'
 
-await CocktailsModel.deleteMany()
+await CocktailModel.deleteMany()
 console.log('Deleted all cocktails')
 
 
 const cocktails = [
+  {id:1234},
   { name: 'margharita' },
   { instructions: 'shake and stir'},
   { ingredients: ['pineapple','apple']}
+
 ]
 
-const cocktail = await CocktailsModel.insertMany(cocktails)
-console.log('Inserted cocktails')
+await CocktailModel.insertMany(cocktails)
+
+console.log('Inserted test cocktails')
 
 
 dbClose()
