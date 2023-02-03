@@ -70,8 +70,8 @@ function Favourites() {
         <Row>
         <SearchAgain />
         </Row>
-        
       </Container>
+
     </>
   );
 }
