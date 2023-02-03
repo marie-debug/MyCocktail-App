@@ -1,8 +1,9 @@
 // List of cocktails available to display from the API
-import React, { useEffect, useState } from "react";
-import {useSearchParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react"
+import {useSearchParams } from 'react-router-dom'
 import Cocktail from './Cocktail'
 import SearchAgain from '../components/SearchAgain'
+import Footer from '../components/Footer'
 
 const  CocktailList= ()=> {
    
@@ -51,6 +52,7 @@ const  CocktailList= ()=> {
       )}    
 
       <SearchAgain/>
+      <Footer />
 
   </>
   )

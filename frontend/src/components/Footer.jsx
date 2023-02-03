@@ -1,13 +1,15 @@
+import { Container, Row, Col } from "react-bootstrap"
 
 const Footer = () => {
   return (
-    <div className="footer-p">
-      <footer className="footer py-7">
-        <div className="container-footer">
-        <span className="text-muted">My Cocktail | &copy; Copyright | { new Date().getFullYear()}</span>
-        </div>
-      </footer>
-    </div>
+    <Container>
+      <Row className='footer'>
+        <Col className='py-2'>
+          <span className="text-muted">My Cocktail | &copy; Copyright | { new Date().getFullYear()}</span>
+        </Col>
+      </Row>
+    </Container>
+
   )
 }
 
