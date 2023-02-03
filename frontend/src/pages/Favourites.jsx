@@ -51,7 +51,7 @@ function Favourites() {
                   <ol>{ingred}</ol>
                 ))}
               
-                <span class="mx-auto" style={{ fontWeight: "bold" }}>
+                <span className="mx-auto" style={{ fontWeight: "bold" }}>
                   Instructions:
                 </span>
                 <p>{data.instructions}</p>

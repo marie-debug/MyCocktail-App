@@ -23,7 +23,7 @@ function App() {
             <Route path='/cocktailList' element={<CocktailList />} />
             <Route path='/error' element={<Error />} />
           </Routes>
-          <Footer />
+         
         </div>
       </Router>
       </ErrorBoundary>

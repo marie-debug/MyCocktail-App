@@ -41,7 +41,7 @@ const Cocktail =({cocktail})=>{
                   ))}</p>
             <span style={{ fontWeight: 'bold' }}>Instructions:</span>
             <p>{cocktail.instructions}</p>
-            <div class="d-flex justify-content-center ">
+            <div className="d-flex justify-content-center ">
             <button type='submit' className='btn btn-warning .button1' onClick={()=>{saveCocktail(cocktail)}}>Save to Favorites</button>
             </div>
           </section>
