@@ -174,18 +174,6 @@ h3 {
   margin: 0 0 5px 3px;
 }
 
-.container-footer {
-    width: 100%;
-    margin-top: auto;
-    padding: 5px 20px;
-    text-align: center;
-    background: #183230;
-}
-
-.footer-p {
-  padding-top: 8rem;
-}
-
 .btn {
   padding: 10px 20px;
   background: #F2B137;
@@ -224,6 +212,18 @@ img {
 #cry {
   margin-bottom: 20px;
 }
+
+.footer {
+  width: 90%;
+  margin-top: auto;
+  max-width: 960px;
+  text-align: center;
+  background: #183230;
+  position: absolute;
+  bottom: 0;
+
+}
+
 
 @media (max-width: 600px) {
   .form img {
