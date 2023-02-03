@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-// Defining the cocktailSchema + associate a user with their saved cocktails
+// Defining the cocktailSchema to define structure of model
 const CocktailSchema = new mongoose.Schema(
 {
     name: {

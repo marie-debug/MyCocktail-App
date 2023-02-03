@@ -11,8 +11,9 @@
     "frontend": "cd frontend && vite",
     "build": "cd frontend && vite build",
     "preview": "cd frontend && vite preview --host",
-    "backend": "nodemon backend/app.js",
-    "test": "vitest"
+    "backend": "nodemon backend/server.js",
+    "test": "vitest",
+    "test_express": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "repository": {
     "type": "git",
