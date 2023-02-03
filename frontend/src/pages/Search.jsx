@@ -1,6 +1,6 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState,useEffect} from 'react'
 import SearchBox from '../components/SearchBox'
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col } from 'react-bootstrap'
 import Footer from '../components/Footer'
 
 import { useNavigate } from "react-router-dom"
