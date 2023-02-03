@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom' 
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header'
 import Search from './pages/Search'
 import Cocktail from './pages/Cocktail'
@@ -25,7 +23,7 @@ function App() {
             <Route path='/cocktailList' element={<CocktailList />} />
             <Route path='/error' element={<Error />} />
           </Routes>
-          <ToastContainer />
+          <Footer />
         </div>
       </Router>
       </ErrorBoundary>
