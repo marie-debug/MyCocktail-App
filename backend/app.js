@@ -5,7 +5,7 @@ import cors from 'cors'
 
 import errorHandler from './middleware/errorMiddleware.js'
 import cocktailRoutes  from  './routes/cocktail_routes.js'
-import myCocktailRoute from './routes/myCocktail_routes.js'
+import myCocktailRoutes from './routes/myCocktail_routes.js'
 
 import connectDB from './config/db.js'
 
@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/cocktails',cocktailRoutes)
-app.use('/my/cocktail', myCocktailRoute)
+app.use('/my/cocktail', myCocktailRoutes)
 // app.use('/user', UserRoute)
 
 app.use(errorHandler)
@@ -34,4 +34,3 @@ app.listen(port, () => console.log(`Server running on port ${port}`));
 export default app
 
 // app.listen(3000);
-

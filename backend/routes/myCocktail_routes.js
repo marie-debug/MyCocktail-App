@@ -3,16 +3,14 @@ import CocktailModel from '../models/cocktailModel.js'
 
 const router = express.Router()
 
-// @desc    Get a cocktail
-// @route   GET /my/cocktail
-// @access  Private 
+// gets cocktail from the db 
 router.get('/', async (req, res) => {
     try {
       const cocktail = await CocktailModel.find()
       if (cocktail) {
         res.send(cocktail)
       } else {
-        res.status(200).json({ message: 'Get route not working' })
+        res.status(404).json({error: 'cocktail not found' })
       }
     }
     catch (err) {
@@ -20,76 +18,36 @@ router.get('/', async (req, res) => {
     }
   })
 
+//post new cocktail entries to db after checking whether cocktail exists
   router.post('/', async (req, res) => {
+      try{
+      const newCocktail = CocktailModel.find({ ...req.body })
+      if(newCocktail){
+        res.status(403).json({error: 'Cocktail already exists'})
+      }
+      else{
+        const insertedCocktail = await newCocktail.save()
+        return res.status(201).json(insertedCocktail)
+      }
+    }catch(err) {res.status(422).json({ error: err.message })}
+  
+  })
+   
 
-      const newCocktail = CocktailModel({ ...req.body });
-      const insertedCocktail = await newCocktail.save()
-      return res.status(201).json(insertedCocktail);
-        
+// deletes cocktail by id in the db and returns an ok response
+router.delete('/:id', async (req, res) => {
+  try {
+    const cocktail = await CocktailModel.findByIdAndDelete(req.params.id)
+    if (cocktail) {
+      res.status(204).json({ message: `Deleted ${req.params.name}` })    
+    } else {
+      res.status(404).json({ error: 'Cocktail not found '})
+    }
+  }
+  catch (err) {
+    res.status(500).json({ error: err.message })
+  }
 })
-
-
-
-
-
-
-
-
-
-// router.get('/:id', async (req, res) => {
-//     try {
-//       const cocktail = await CocktailModel.findById(req.params.id)
-//       if (cocktail) {
-//         res.send(cocktail)
-//       } else {
-//         res.status(404).json({ error: 'Could not find your cocktail' })
-//       }
-//     }
-//     catch (err) {
-//       res.status(500).json({ error: err.message })
-//     }
-//   })
-
-// @desc    Add a cocktail
-// @route   POST /my/cocktail
-// @access  Private 
-
-// @desc    Updated a cocktail
-// @route   PUT /my/cocktail/name
-// @access  Private 
-// router.put('/:id', async (req, res) => {
-//     const { name, ingredients, instructions } = req.body
-//     const newCocktail = {name, ingredients, instructions }
-
-//     try {
-//       const cocktail = await CocktailModel.findByIdAndUpdate(req.params.id, newCocktail, {returnDocument: 'after' })
-//       if (cocktail) {
-//         res.send(cocktail)
-//       } else {
-//         res.send(404).json({ error: 'Entry not found' })
-//       }
-//     }
-//     catch (err0r) {
-//       res.status(500).json({ error: err.message })
-//     }
-// })
-
-// // @desc    Delete a cocktail
-// // @route   DELETE /my/cocktail/name
-// // @access  Private 
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const cocktail = await CocktailModel.findByIdAndDelete(req.params.id)
-//     if (cocktail) {
-//       res.sendStatus(204)
-//     } else {
-//       res.status(404).json({ error: 'Cocktail not found '})
-//     }
-//   }
-//   catch (err) {
-//     res.status(500).json({ message: `Deleted ${req.params.name}` })
-//   }
-// })
 
 
 
