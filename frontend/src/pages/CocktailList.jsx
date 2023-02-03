@@ -1,9 +1,8 @@
 // List of cocktails available to display from the API
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react"
 import {useSearchParams } from 'react-router-dom'
 import Cocktail from './Cocktail'
 import SearchAgain from '../components/SearchAgain'
-import { Container, Row, Col } from 'react-bootstrap'
 import Footer from '../components/Footer'
 
 const  CocktailList= ()=> {
@@ -33,12 +32,10 @@ const  CocktailList= ()=> {
 
   return (
     <>
-      <Container>
-        <Row>
-          <Col className='content'>
-            <h1>Keep Calm and drink a cocktail</h1>
-            <p>Browse through our list of cocktails</p>
-          </Col>
+   <section className='content'>
+        <h1>Keep Calm and drink a cocktail</h1>
+        <p>Browse through our list of cocktails</p>
+      </section>
 
       {Array.isArray(cocktails) && cocktails.length ?
       
@@ -55,9 +52,8 @@ const  CocktailList= ()=> {
       )}    
 
       <SearchAgain/>
-      </Row>
-    </Container>
-    <Footer />
+      <Footer />
+
   </>
   )
 }
