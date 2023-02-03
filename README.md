@@ -16,11 +16,11 @@ ________________________________________________________________________________
 
 [Trello](https://trello.com/invite/b/bGaDJxU8/ATTI8ede4dc9eb69ccd7f3c83fc1213fe4b54F7075F6/t3a2-mern-app-part-a) - Product Delivery (Board is Public)
 
-[Miro](https://miro.com/app/board/uXjVPzbXD88=/) - Virtual Whiteboard for Team Collaboration (Anyone with link can view)
+[Miro](https://miro.com/app/board/uXjVPzbXD88=/) - Virtual Whiteboard for Team Collaboration (Public Link)
 
 [README.md Part-A](/docs/part-a/README.md) - Analysis, Architecture and Design Documentation
 
-
+[Testing Documentation](https://docs.google.com/spreadsheets/d/1U3pMThnGplNzZ5qum9VkcPLLFF5LL1UI-itZlAt9ZiU/edit#gid=609410239) - Deveopment and Production Testing
 ____________________________________________________________________________________
 
 ## Table of Contents
@@ -37,7 +37,8 @@ ________________________________________________________________________________
 
 [Project Delivery](#tracking)
 
-[Unit Testing](#testing)
+[Testing](#testing)
+- [Unit Testing](#unit-testing)
 
 # Run Scripts<a name="scripts"></a>
 
@@ -115,7 +116,7 @@ Example of Frontend Script running:
 
 **Collections:** 
 1. my-cocktails
-2. users (tba)
+2. users (TBA - Next Iteration)
 
 <img src="docs/images/mongo/collections.png" width="500">
 
@@ -125,12 +126,22 @@ Successful POST request testing through POSTMAN
 
 <img src="docs/images/img_routes/added_cocktail.png" width="500">
 
-____________________________________________________________
+__________________________________________________________
 
 # Frontend<a name="frontend"></a>
 
+* Add images here of testing and screenshots of FE
+
 
 # Project Delivery<a name="tracking"></a>
+
+Every Monday, Wednesday and Friday a Team catch up:
+* Walk the Trello board (discuss in-progress, blocked, finished)
+* Discuss any feedback, improve on processes or share any knowledge
+* Talk about what is next on the list to do
+
+<img src="docs/images/trello/week1.png" width="500">
+<img src="docs/images/trello/week2.png" width="500">
 
 ## Trello Screenshots
 
@@ -165,8 +176,7 @@ ____________________________________________________________
 
 <img src="docs/images/dt_day5.png" width="300">
 
-readme-b
-__________________________________________________________________________
+___________________________________________________________
 
 **Week 2 - Day 3**
 
@@ -176,11 +186,31 @@ __________________________________________________________________________
 * Unit Testing - vitest / jsdom 
 * Production testing
 
-__________________________________________________________________
+**Day 5**
 
-# Unit Testing<a name="testing"></a>
+* FE and BE unit tests 
+* Another round of testing in Development and Production
+* Add success toast for adding a cocktail to favourites 
+* Finding other smaller tweaks to improve the user experience
+* Add a delete/ remove functionality for Favourites (user can remove a cocktail from their list)
 
-Since the Frontend was built with vite, testing is using vitest. 
+<img src="docs/images/trello/w2_day5.png" width="500">
+___________________________________________________________
+
+# Testing<a name="testing"></a>
+
+[Testing Spreadsheet](https://docs.google.com/spreadsheets/d/1U3pMThnGplNzZ5qum9VkcPLLFF5LL1UI-itZlAt9ZiU/edit#gid=609410239) - Public Link
+
+The above attachment includes testing of:
+* Development throughout proces
+* Testing of Production once deployed and after significant changes 
+
+<img src="docs/images/testing/dev_test_1Feb.png" width="500">
+
+
+# Unit Testing<a name="unit-testing"></a>
+
+Since the Frontend was built with vite, testing is with vitest. 
 
 **Packages**
 
