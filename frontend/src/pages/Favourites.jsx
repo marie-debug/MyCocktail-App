@@ -24,11 +24,8 @@ function Favourites() {
     }
   };
   async function deleteFavourite(id) {
-
-    
-    
     try {
-      const response = await fetch("http://localhost:3000/my/cocktail/" + id, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/my/cocktail/${id}`, {
         method: "DELETE",
       });
       console.log(response)

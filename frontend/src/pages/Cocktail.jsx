@@ -1,7 +1,6 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from 'react-bootstrap/Button'
 
-
 const Cocktail = ({ cocktail, itemNumber }) => {
   
   function saveCocktail(cocktail) {
@@ -15,7 +14,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       instructions: cocktail.instructions,
     };
 
-    fetch("http://localhost:3000/my/cocktail", {
+    fetch(`${import.meta.env.VITE_BACKEND_API}/my/cocktail`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,6 +25,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
         return response.json();
       })
       .then((data) => {
+        window.location="/Favourites"
         console.log(data);
       });
   }
@@ -51,7 +51,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       <div className="text-center"></div>
       <div className="d-flex justify-content-center ">
         <Button variant= "warning" onClick={() => {saveCocktail(cocktail)}}>
-          <SaveButton />
+        Save to Favorites
         </Button>
       </div>
     </section>
