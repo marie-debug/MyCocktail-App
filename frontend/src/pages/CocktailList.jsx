@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import {useSearchParams } from 'react-router-dom'
 import Cocktail from './Cocktail'
 import SearchAgain from '../components/SearchAgain'
-import Footer from '../components/Footer'
+
 
 const  CocktailList= ()=> {
    
@@ -32,16 +32,16 @@ const  CocktailList= ()=> {
 
   return (
     <>
-   <section className='content'>
+   <section className='content text-center'>
         <h1>Keep Calm and drink a cocktail</h1>
-        <p>Browse through our list of cocktails</p>
+        <h2>Browse through our list of cocktails</h2>
       </section>
 
       {Array.isArray(cocktails) && cocktails.length ?
       
-      cocktails.map((cocktail) => {
+      cocktails.map((cocktail,i) => {
           return (
-            <Cocktail cocktail={cocktail}/>
+            <Cocktail key= {i} itemNumber ={i+1} cocktail={cocktail}/>
             )
           }
      
@@ -52,8 +52,6 @@ const  CocktailList= ()=> {
       )}    
 
       <SearchAgain/>
-      <Footer />
-
   </>
   )
 }

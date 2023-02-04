@@ -6,7 +6,8 @@ import Favourites from './pages/Favourites'
 import CocktailList from './pages/CocktailList'
 import Error from './pages/Error'
 import ErrorBoundary from './components/ErrorBoundary'
-
+import Footer from './components/Footer'
+import Container from "react-bootstrap/Container"
 
 function App() {
   
@@ -14,7 +15,7 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className='container'>
+        <Container className ="min-vh-96 text-center">
           <Header />
           <Routes>
             <Route path='/' element={<Search />} />
@@ -23,8 +24,8 @@ function App() {
             <Route path='/cocktailList' element={<CocktailList />} />
             <Route path='/error' element={<Error />} />
           </Routes>
-          <Footer />
-        </div>
+        </Container>
+        <Footer/>
       </Router>
       </ErrorBoundary>
   )

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react"
-import SearchAgain from "../components/SearchAgain"
-import ImageFavourites from "../components/ImageFavourites"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Container from "react-bootstrap/Container"
+import React, { useEffect, useState } from "react";
+import SearchAgain from "../components/SearchAgain";
+import ImageFavourites from "../components/ImageFavourites";
+import Row from "react-bootstrap/Row";
+
+import Container from "react-bootstrap/Container";
+import FavouriteCard from "../components/FavouriteCard";
 
 function Favourites() {
   const [cocktailData, setCocktailData] = useState(null);
@@ -31,33 +32,14 @@ function Favourites() {
     <>
       <Container fluid className="card-cocktail">
         <Row>
-        <h1>My favourites</h1>
-        <span>Here's to alcohol, the rose colored glasses of life!</span>
-        <ImageFavourites />
-  
+          <h1>My favourites</h1>
+          <span>Here's to alcohol, the rose colored glasses of life!</span>
+          <ImageFavourites />
         </Row>
-    <Row>     
+        <Row>
           {Array.isArray(cocktailData) && cocktailData.length ? (
-            cocktailData.map((data) => (
-              <>
-              <Col md={12}>
-               {/* key={data._id} */}
-                <h2>
-                  <u>{data.name.toUpperCase()}</u>
-                </h2>
-              
-                <span style={{ fontWeight: "bold" }}>Ingredients:</span>
-                {data.ingredients.map((ingred) => (
-                  <ol>{ingred}</ol>
-                ))}
-              
-                <span class="mx-auto" style={{ fontWeight: "bold" }}>
-                  Instructions:
-                </span>
-                <p>{data.instructions}</p>
-                </Col>
-                </>
-              
+            cocktailData.map((data,i) => (
+              <FavouriteCard key={i} favourite={data}/>
             ))
           ) : (
             <>
@@ -65,12 +47,10 @@ function Favourites() {
               <p>Search and add a cocktail to your favourites!</p>
             </>
           )}
-        
-   </Row>
-        <Row>
-        <SearchAgain />
         </Row>
-        
+        <Row>
+          <SearchAgain />
+        </Row>
       </Container>
     </>
   );

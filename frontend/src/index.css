@@ -41,15 +41,6 @@ h3 {
   color: #183230;
 }
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -130,22 +121,12 @@ h3 {
   font-family: Helvetica, 'FontAwesome', sans-serif;
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: 100px;
-  width: 100px;
-  background: #FAEFEE;
-  margin: 15px;
-  padding: 20px;
-}
+
 
 .card-cocktail {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  height: auto;
-  width: auto;
   background: #FAEFEE;
-  margin: 15px;
-  padding: 20px;
+  
 }
 
 .form,
@@ -174,34 +155,12 @@ h3 {
   margin: 0 0 5px 3px;
 }
 
-.btn {
-  padding: 10px 20px;
-  background: #F2B137;
-  color: #183230;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  text-align: center;
-  appearance: button;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30%;
+
+
+.min-vh-96 {
+  min-height: 96vh!important;
 }
 
-.btn svg {
-  margin-right: 8px;
-}
-
-.btn-reverse {
-  background: #FA8216;
-  color: #183230;
-  
-}
-
-.btn:hover {
-  transform: scale(0.98);
-}
 
 img {
   height: auto;
@@ -214,16 +173,14 @@ img {
 }
 
 .footer {
-  width: 90%;
   margin-top: auto;
-  max-width: 920px;
   text-align: center;
   background: #183230;
-  position: absolute;
-  bottom: 0;
 
 }
-
+.list-group-item{
+  background: #FAEFEE;
+}
 
 @media (max-width: 600px) {
   .form img {
