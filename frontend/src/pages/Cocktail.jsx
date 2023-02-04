@@ -1,6 +1,5 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from 'react-bootstrap/Button'
-
 const Cocktail = ({ cocktail, itemNumber }) => {
   
   function saveCocktail(cocktail) {
@@ -50,7 +49,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       <div className="text-center"></div>
       <div className="d-flex justify-content-center ">
         <Button variant= "warning" onClick={() => {saveCocktail(cocktail)}}>
-          Save to Favorites
+        <Link to="/Favourites">Save to Favorites</Link>
         </Button>
       </div>
     </section>
