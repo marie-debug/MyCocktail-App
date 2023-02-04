@@ -128,7 +128,7 @@ function ErrorFallback() {
           />
         </g>
 
-        <path class="fio"
+        <path className="fio"
           stroke="#2D3F5B"
           stroke-linecap="round"
           stroke-width="4"
@@ -136,7 +136,7 @@ function ErrorFallback() {
           transform="translate(-448 -158) translate(448 157)"
         />
 
-        <g class="full-torradeira">
+        <g className="full-torradeira">
           <g
             transform="translate(-448 -158) translate(448 157) translate(332.51 262.987)"
           >
@@ -186,7 +186,7 @@ function ErrorFallback() {
             />
           </g>
 
-          <g class="pao-atras">
+          <g className="pao-atras">
             <g
               transform="translate(-448 -158) translate(448 157) translate(340.903 169.665)"
             >
@@ -213,7 +213,7 @@ function ErrorFallback() {
             </g>
           </g>
 
-          <g class="pao-frente">
+          <g className="pao-frente">
             <g
               transform="translate(-448 -158) translate(448 157) translate(326.515 182.854)"
             >
@@ -247,7 +247,7 @@ function ErrorFallback() {
                 <use xlinkHref="#prefix__y" />
               </mask>
               <path
-                     class="olho-esq"
+                     className="olho-esq"
                 fill="#633"
                 d="M-4.153 -6.995L12.298 -3.797 9.107 12.627 -7.346 9.429z"
                 mask="url(#prefix__z)"
@@ -261,7 +261,7 @@ function ErrorFallback() {
                 <use xlinkHref="#prefix__A" />
               </mask>
               <path
-                    class="olho-dir"
+                    className="olho-dir"
                 fill="#633"
                 d="M-4.248 -6.976L12.203 -3.778 9.011 12.645 -7.441 9.448z"
                 mask="url(#prefix__B)"
@@ -275,7 +275,7 @@ function ErrorFallback() {
                 <use xlinkHref="#prefix__C" />
               </mask>
               <path
-                    class="boca"
+                    className="boca"
                 fill="#633"
                 d="M-3.14 -7.546L17.993 -3.438 14.8 12.985 -6.333 8.878z"
                 mask="url(#prefix__D)"
@@ -283,7 +283,7 @@ function ErrorFallback() {
             </g>
           </g>
           <g
-            class="torradeira"
+            className="torradeira"
             transform="translate(-448 -158) translate(448 157) translate(325.316 218.624)"
           >
             <mask id="prefix__x" fill="#fff">
@@ -297,7 +297,7 @@ function ErrorFallback() {
           </g>
         </g>
         <g
-          class="raios"
+          className="raios"
           stroke="#fdba55"
           stroke-linecap="round"
           stroke-width="1.8"
@@ -314,7 +314,7 @@ function ErrorFallback() {
           <mask id="prefix__F" fill="#fff">
             <use xlinkHref="#prefix__E" />
           </mask>
-          <path class="tomada"
+          <path className="tomada"
             fill="#2D3F5B"
             d="M10.383 -14.007L34.351 9.962 12.875 31.438 -11.095 7.469z"
             mask="url(#prefix__F)"
@@ -327,7 +327,7 @@ function ErrorFallback() {
           <mask id="prefix__H" fill="#fff">
             <use xlinkHref="#prefix__G" />
           </mask>
-          <path class="tomada"
+          <path className="tomada"
             fill="#2D3F5B"
             d="M10.807 -12.875L32.391 8.709 10.793 30.309 -10.793 8.724z"
             mask="url(#prefix__H)"
@@ -336,7 +336,7 @@ function ErrorFallback() {
       </g>
     </g>
   </svg>
-  <h1 class="error-title">
+  <h1 className="error-title">
     Woops! <br/>Something went wrong :(
   </h1>
   <h2 className="error-subtitle">
