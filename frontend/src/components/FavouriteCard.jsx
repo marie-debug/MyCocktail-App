@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
 
-function FavouriteCard({ favourite }) {
+const FavouriteCard = ({ favourite, deleteFavourite }) => {
   return (
     <Col md={6} sm={12}>
       <Card>
@@ -18,12 +18,19 @@ function FavouriteCard({ favourite }) {
           <h2>Instructions:</h2>
           <Card.Text>{favourite.instructions}</Card.Text>
           <div className="d-flex justify-content-center">
-            <Button variant="danger">Delete</Button>
+            <Button
+              variant="danger"
+              onClick={() => {
+                deleteFavourite(favourite._id);
+              }}
+            >
+              Delete
+            </Button>
           </div>
         </Card.Body>
       </Card>
     </Col>
   );
-}
+};
 
 export default FavouriteCard;
