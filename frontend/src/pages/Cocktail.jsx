@@ -1,8 +1,10 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from 'react-bootstrap/Button'
+import { Link } from "react-router-dom"
+
 const Cocktail = ({ cocktail, itemNumber }) => {
   
-  function saveCocktail(cocktail) {
+  async function saveCocktail(cocktail) {
     //TODO Get actual user ID from cookie session
     const userID = 1234;
 
@@ -25,6 +27,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       })
       .then((data) => {
         console.log(data);
+        window.location="/Favourites"
       });
   }
 
@@ -49,7 +52,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       <div className="text-center"></div>
       <div className="d-flex justify-content-center ">
         <Button variant= "warning" onClick={() => {saveCocktail(cocktail)}}>
-        <Link to="/Favourites">Save to Favorites</Link>
+        Save to Favorites
         </Button>
       </div>
     </section>
