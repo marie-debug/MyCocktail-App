@@ -1,4 +1,4 @@
-# MyCocktail-App
+# MyCocktail-App<a name="top"></a>
 
 The purpose of My Cocktail App is to develop a Wiki app guide to making classic and modern cocktails. Using the cocktail database API. It features a database with lists of ingredients for each cocktail recipe, allowing users to quickly find the ingredients they need to craft a particular drink, by filtering using alcohol type and name of cocktail. 
 
@@ -51,7 +51,7 @@ ____________________________________________________________
 
 [Testing](#testing)
 - [Testing Plan](#test-plan)
-- [Unit Testing](#unit-testing)
+- [Unit Testing](#unit)
 
 [Deployment](#deployment)
 
@@ -102,7 +102,7 @@ ____________________________________________________________
 * react-toastify
 * boostrap
 
-**Note:** Testing packages are located under [Unit Testing](#unit-testing)
+**Note:** Testing packages are located under [Unit Testing](#unit)
 
 # Backend <a name="backend"></a>
 
@@ -277,8 +277,9 @@ The above attachment includes testing:
 
 <img src="docs/images/testing/dev_test_1Feb.png" width="500">
 
+____________________________________________________________
 
-# Unit Testing<a name="unit-testing"></a>
+## Unit Testing<a name="unit"></a>
 
 Since the Frontend was built with vite, testing is with vitest. 
 
@@ -319,10 +320,14 @@ Websites:
 * https://vitest.dev/
 * https://testing-library.com/docs/react-testing-library/intro/
 
-# Deployment
+# Deployment<a name="deployment"></a>
 
 Deployment is with Railway. 
 
 [Railway Deployment](https://mycocktail.up.railway.app/) - My Cocktail App in Production
 
 * Continuous Integration was set up to merge requests
+
+____________________________________________________________
+
+[Return to Top](#top)
