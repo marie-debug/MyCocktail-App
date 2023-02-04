@@ -19,7 +19,6 @@ function Error() {
           </Row>
           <SearchAgain />
       </Container> 
-    <Footer />
     </>
   )
 }
