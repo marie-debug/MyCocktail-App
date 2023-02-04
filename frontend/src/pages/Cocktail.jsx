@@ -1,5 +1,7 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from 'react-bootstrap/Button'
+import SaveButton from "../components/SaveButton";
+
 const Cocktail = ({ cocktail, itemNumber }) => {
   function saveCocktail(cocktail) {
     //TODO Get actual user ID from cookie session
@@ -48,7 +50,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       <div className="text-center"></div>
       <div className="d-flex justify-content-center ">
         <Button variant= "warning" onClick={() => {saveCocktail(cocktail)}}>
-          Save to Favorites
+          <SaveButton />
         </Button>
       </div>
     </section>

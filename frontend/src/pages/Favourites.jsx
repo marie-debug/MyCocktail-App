@@ -10,7 +10,7 @@ function Favourites() {
   const [cocktailData, setCocktailData] = useState(null);
   const fetchData = () => {
     try {
-      fetch(`${import.meta.env.VITE_BACKEND_API}/my/cocktail`)
+      fetch(`http://localhost:3000/my/cocktail`)
         .then((response) => {
           return response.json();
         })
