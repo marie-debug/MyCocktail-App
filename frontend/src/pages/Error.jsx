@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap"
 import { FaSadCry } from "react-icons/fa"
-import Footer from "../components/Footer"
 
 import SearchAgain from '../components/SearchAgain'
 
@@ -18,8 +17,7 @@ function Error() {
             </Col>
           </Row>
           <SearchAgain />
-      </Container> 
-    <Footer />
+      </Container>
     </>
   )
 }

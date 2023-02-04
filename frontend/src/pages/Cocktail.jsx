@@ -1,6 +1,8 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from 'react-bootstrap/Button'
+
 const Cocktail = ({ cocktail, itemNumber }) => {
+  
   function saveCocktail(cocktail) {
     //TODO Get actual user ID from cookie session
     const userID = 1234;
