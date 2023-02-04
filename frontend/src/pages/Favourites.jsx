@@ -7,8 +7,8 @@ import Container from "react-bootstrap/Container";
 import FavouriteCard from "../components/FavouriteCard";
 
 function Favourites() {
-  const [favourites, setFavourites] = useState(null);
-  const GetFavouriteCocktails = () => {
+  const [cocktailData, setCocktailData] = useState(null);
+  const fetchData = () => {
     try {
       fetch(`${import.meta.env.VITE_BACKEND_API}/my/cocktail`)
         .then((response) => {
@@ -16,38 +16,16 @@ function Favourites() {
         })
         .then((data) => {
           {
-            setFavourites(data);
+            setCocktailData(data);
           }
         });
     } catch (error) {
       console.log("Error: ", error);
     }
   };
-  async function deleteFavourite(id) {
-
-    
-    
-    try {
-      const response = await fetch("http://localhost:3000/my/cocktail/" + id, {
-        method: "DELETE",
-      });
-      console.log(response)
-      if (response.status === 204) {
-        
-        console.log("successfully deleted");
-        let newFavouritesList = favourites.filter(
-          (favouriteItem) => favouriteItem._id !== id
-        );
-    
-        setFavourites(newFavouritesList);
-      }
-    } catch (err) {
-      console.log("failed to delete", err);
-    }
-  }
 
   useEffect(() => {
-    GetFavouriteCocktails();
+    fetchData();
   }, []);
 
   return (
@@ -59,13 +37,9 @@ function Favourites() {
           <ImageFavourites />
         </Row>
         <Row>
-          {Array.isArray(favourites) && favourites.length ? (
-            favourites.map((favourite, i) => (
-              <FavouriteCard
-                key={i}
-                favourite={favourite}
-                deleteFavourite={deleteFavourite}
-              />
+          {Array.isArray(cocktailData) && cocktailData.length ? (
+            cocktailData.map((data,i) => (
+              <FavouriteCard key={i} favourite={data}/>
             ))
           ) : (
             <>
