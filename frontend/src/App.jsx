@@ -8,6 +8,8 @@ import Error from './pages/Error'
 import ErrorBoundary from './components/ErrorBoundary'
 import Footer from './components/Footer'
 import Container from "react-bootstrap/Container"
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   
@@ -24,7 +26,9 @@ function App() {
             <Route path='/cocktailList' element={<CocktailList />} />
             <Route path='/error' element={<Error />} />
           </Routes>
+          <ToastContainer autoClose={5000} closeOnClick={true} pauseOnHover={false}/>
         </Container>
+        
         <Footer/>
       </Router>
       </ErrorBoundary>
