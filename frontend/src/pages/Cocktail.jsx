@@ -1,11 +1,9 @@
 import ListGroup from "react-bootstrap/ListGroup";
-import Button from 'react-bootstrap/Button'
-import SaveButton from "../components/SaveButton";
-
+import Button from "react-bootstrap/Button";
+import { toast } from "react-toastify";
 
 const Cocktail = ({ cocktail, itemNumber }) => {
-  
-  function saveCocktail(cocktail) {
+  async function saveCocktail(cocktail) {
     //TODO Get actual user ID from cookie session
     const userID = 1234;
 
@@ -16,7 +14,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       instructions: cocktail.instructions,
     };
 
-    fetch("http://localhost:3000/my/cocktail", {
+    fetch(`${import.meta.env.VITE_BACKEND_API}/my/cocktail`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,11 +22,23 @@ const Cocktail = ({ cocktail, itemNumber }) => {
       body: JSON.stringify(favouriteCocktail),
     })
       .then((response) => {
-        return response.json();
+        if (response.status === 201) {
+          toast.success(`saved ${favouriteCocktail.name} successfully!`);
+        } else if (response.status === 200) {
+          toast.success(
+            `Already saved ${favouriteCocktail.name} successfully!`
+          );
+        } else {
+          toast.error("oops! Something went wrong");
+        }
+        return response.status;
       })
-      .then((data) => {
-        console.log(data);
+      .then((status) => {
+        if (status === 200 || status === 201) {
+          setTimeout(() => (window.location = "/Favourites"), 1500);
+        }
       });
+
   }
 
   return (
@@ -49,14 +59,17 @@ const Cocktail = ({ cocktail, itemNumber }) => {
         <p className="w-50 text-center">{cocktail.instructions}</p>
       </div>
 
-      <div className="text-center"></div>
       <div className="d-flex justify-content-center ">
-        <Button variant= "warning" onClick={() => {saveCocktail(cocktail)}}>
-          <SaveButton />
+        <Button
+          variant="warning"
+          onClick={() => {
+            saveCocktail(cocktail);
+          }}
+        >
+          Save to Favorites
         </Button>
       </div>
     </section>
   );
 };
-
 export default Cocktail;

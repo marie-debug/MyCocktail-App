@@ -16,6 +16,7 @@ const  CocktailList= ()=> {
     try{
     fetch(`${import.meta.env.VITE_BACKEND_API}/cocktails/${searchText}`)
       .then(response => {
+        console.log("gjgj",response)
         return response.json()
       })
       .then(data => {
