@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import SearchAgain from "../components/SearchAgain";
 import ImageFavourites from "../components/ImageFavourites";
 import Row from "react-bootstrap/Row";
-
 import Container from "react-bootstrap/Container";
 import FavouriteCard from "../components/FavouriteCard";
+import { toast } from "react-toastify";
 
 function Favourites() {
   const [favourites, setFavourites] = useState(null);
@@ -23,24 +23,23 @@ function Favourites() {
       console.log("Error: ", error);
     }
   };
+
   async function deleteFavourite(id) {
-    try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/my/cocktail/${id}`, {
-        method: "DELETE",
-      });
-      console.log(response)
-      if (response.status === 204) {
-        
-        console.log("successfully deleted");
-        let newFavouritesList = favourites.filter(
-          (favouriteItem) => favouriteItem._id !== id
-        );
-    
-        setFavourites(newFavouritesList);
-      }
-    } catch (err) {
-      console.log("failed to delete", err);
-    }
+    fetch(`${import.meta.env.VITE_BACKEND_API}/my/cocktail/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.status === 204) {
+          let newFavouritesList = favourites.filter(
+            (favouriteItem) => favouriteItem._id !== id
+          );
+          setFavourites(newFavouritesList);
+          toast.success(`cocktail deleted successfully!`);
+        } else {
+          toast.error("oops! Something went wrong");
+        }
+        return response.status;
+      })
   }
 
   useEffect(() => {
