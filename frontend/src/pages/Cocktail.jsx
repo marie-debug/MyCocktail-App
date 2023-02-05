@@ -29,7 +29,7 @@ const Cocktail = ({ cocktail, itemNumber }) => {
             `Already saved ${favouriteCocktail.name} successfully!`
           );
         } else {
-          toast.error("oops! Something went wrong");
+          toast.error("Oops! Something went wrong");
         }
         return response.status;
       })
