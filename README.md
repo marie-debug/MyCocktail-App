@@ -40,8 +40,9 @@ ____________________________________________________________
 [Packages](#packages)
 
 [Backend](#backend)
-* [API Routes](#api)
-* [Mongo - Atlas](#mongo)
+- [External API](#api-ninja)
+- [API Routes](#api)
+- [Mongo - Atlas](#mongo)
 
 [Frontend](#frontend)
 * [Images](#mw)
@@ -114,6 +115,17 @@ Run ``npm i`` to install all dependencies
 **Note:** Testing packages are located under [Unit Testing](#unit)
 
 # Backend <a name="backend"></a>
+
+## External API<a name="api-ninja"></a>
+
+External API used: 
+
+**Cocktail API**
+
+The Cocktail API allows you to search thousands of cocktail recipes by name or ingredients.
+
+https://api-ninjas.com/api/cocktail
+
 
 ## API Routes<a name="api"></a>
 
@@ -308,6 +320,12 @@ Websites:
 
 * <https://www.npmjs.com/package/supertest>
 * <https://railway.app/>
+
+**Backend Testing**
+
+* To test, run testing script:
+
+``npm run test_express``
 
 # Deployment<a name="deployment"></a>
 
