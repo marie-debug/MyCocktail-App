@@ -28,7 +28,6 @@ function App() {
           </Routes>
           <ToastContainer autoClose={5000} closeOnClick={true} pauseOnHover={false}/>
         </Container>
-        
         <Footer/>
       </Router>
       </ErrorBoundary>
