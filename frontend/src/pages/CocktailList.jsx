@@ -22,7 +22,7 @@ const CocktailList = () => {
       })
       .then((data) => {
         const count = data === undefined ? 0 : data.length;
-        toast.info(`Wohoo!! we found ${count} cocktails that match your search!`);
+        toast.info(`Wohoo we found ${count} cocktails that match your search!`);
 
         setCocktails(data);
       });
