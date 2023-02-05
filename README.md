@@ -39,6 +39,7 @@ ____________________________________________________________
 [Packages](#packages)
 
 [Backend](#backend)
+- [External API](#api-ninja)
 - [API Routes](#api)
 - [Mongo - Atlas](#mongo)
 
@@ -105,6 +106,17 @@ ____________________________________________________________
 **Note:** Testing packages are located under [Unit Testing](#unit)
 
 # Backend <a name="backend"></a>
+
+## External API<a name="api-ninja"></a>
+
+External API used: 
+
+**Cocktail API**
+
+The Cocktail API allows you to search thousands of cocktail recipes by name or ingredients.
+
+https://api-ninjas.com/api/cocktail
+
 
 ## API Routes<a name="api"></a>
 
@@ -319,6 +331,12 @@ Websites:
 
 * https://vitest.dev/
 * https://testing-library.com/docs/react-testing-library/intro/
+
+**Backend Testing**
+
+* To test, run testing script:
+
+``npm run test_express``
 
 # Deployment<a name="deployment"></a>
 
