@@ -1,12 +1,21 @@
-# MyCocktail-App
+# MyCocktail-App<a name="top"></a>
 
+The purpose of My Cocktail App is to develop a Wiki app guide to making classic and modern cocktails. Using the cocktail database API. It features a database with lists of ingredients for each cocktail recipe, allowing users to quickly find the ingredients they need to craft a particular drink, by filtering using alcohol type and name of cocktail. 
+
+**Technology Stack: MERN**
+* Mongo DB
+* Express
+* React
+* Node JS
+
+____________________________________________________________
 
 **Group Members**
 
 * Marion Akinyi
 * Katrina Tomaszczyk
 
-____________________________________________________________________________________
+____________________________________________________________
 
 **Important Links**
 
@@ -20,8 +29,8 @@ ________________________________________________________________________________
 
 [README.md Part-A](/docs/part-a/README.md) - Analysis, Architecture and Design Documentation
 
-[Testing Documentation](https://docs.google.com/spreadsheets/d/1U3pMThnGplNzZ5qum9VkcPLLFF5LL1UI-itZlAt9ZiU/edit#gid=609410239) - Deveopment and Production Testing
-____________________________________________________________________________________
+[Testing Documentation](/docs/testing_plan/My%20Cocktail%20App%20-%20Testing.pdf) - Link to spreadsheet
+____________________________________________________________
 
 ## Table of Contents
 
@@ -34,11 +43,18 @@ ________________________________________________________________________________
 - [Mongo - Atlas](#mongo)
 
 [Frontend](#frontend)
+- [Images](#mw)
 
 [Project Delivery](#tracking)
+- [Trello](#trello)
+- [Source Control](#git)
 
 [Testing](#testing)
-- [Unit Testing](#unit-testing)
+- [Testing Plan](#test-plan)
+- [Unit Testing](#unit)
+
+[Deployment](#deployment)
+
 
 # Run Scripts<a name="scripts"></a>
 
@@ -65,6 +81,7 @@ Example of Frontend Script running:
 
 <img src="docs/images/fe_script.png" width="200">
 
+____________________________________________________________
 
 ## Packages<a name="packages"></a>
 
@@ -82,14 +99,20 @@ Example of Frontend Script running:
 * react-router-dom
 * react-icons
 * axios
-* toastify
+* react-toastify
 * boostrap
+
+**Note:** Testing packages are located under [Unit Testing](#unit)
 
 # Backend <a name="backend"></a>
 
 ## API Routes<a name="api"></a>
 
-**Function:** Ability to save a cocktail to your list (Favourites). This includes the ability to see all cocktails in the list, add a new cocktail, update an existing cocktail and delete one from the list. (CRUD functionality)
+**Function:** 
+
+Ability to save a cocktail to your list (Favourites). This includes the ability to see all cocktails in the list, add a new cocktail from the Cocktail API and delete one from the list. 
+
+**Note:** Next iteration includes the ability to add your own cockail (form on the frontend) and update an existing cocktail through the PUT method. The backend was designed with this in mind. 
 
 **Route Folder:**  myCocktail_routes.js
 
@@ -97,16 +120,18 @@ Example of Frontend Script running:
 
 **POST** http://localhost:3000/my/cocktail
 
-**PUT** http://localhost:3000/my/cocktail/name
+**PUT** http://localhost:3000/my/cocktail/id
 
-**DELETE** http://localhost:3000/my/cocktail/name
+**DELETE** http://localhost:3000/my/cocktail/id
 
-## Testing Screenshots of Routes
+### Testing Screenshots of Routes
 
 <img src="docs/images/img_routes/get_cocktail.png" width="200">
 <img src="docs/images/img_routes/post_cocktail.png" width="200">
 <img src="docs/images/img_routes/put_cocktail.png" width="200">
 <img src="docs/images/img_routes/delete_cocktail.png" width="200">
+
+____________________________________________________________
 
 ## Mongo Atlas<a name="mongo"></a>
 
@@ -126,11 +151,32 @@ Successful POST request testing through POSTMAN
 
 <img src="docs/images/img_routes/added_cocktail.png" width="500">
 
-__________________________________________________________
 
 # Frontend<a name="frontend"></a>
 
-* Add images here of testing and screenshots of FE
+## Images<a name="mw"></a>
+
+Screenshots of the Mobile Web experience.
+
+**Search/Home**
+
+<img src="docs/images/mobile_web/search.png" width="300">
+
+**Results of Cocktails**
+
+<img src="docs/images/mobile_web/results.png" width="300">
+
+**Results from cocktail search toast**
+
+<img src="docs/images/mobile_web/toast_results.png" width="300">
+
+**Favourites**
+
+<img src="docs/images/mobile_web/favourites.png" width="300">
+
+**Delete a cocktail from Favourites**
+
+<img src="docs/images/mobile_web/delete.png" width="300">
 
 
 # Project Delivery<a name="tracking"></a>
@@ -143,7 +189,7 @@ Every Monday, Wednesday and Friday a Team catch up:
 <img src="docs/images/trello/week1.png" width="500">
 <img src="docs/images/trello/week2.png" width="500">
 
-## Trello Screenshots
+## Trello Screenshots<a name=#trello></a>
 
 **Week 1: Day 1**
 
@@ -195,20 +241,45 @@ ___________________________________________________________
 * Add a delete/ remove functionality for Favourites (user can remove a cocktail from their list)
 
 <img src="docs/images/trello/w2_day5.png" width="500">
-___________________________________________________________
+
+**Submission**
+
+* Development Testing 
+* Production Testing
+* Review of Trello Board 
+* Review of outstanding tasks 
+* Review of requirements
+
+<img src="docs/images/trello/submission.png" width="500">
+
+____________________________________________________________
+
+## Source Control<a name=#git></a>
+
+* Git repository set up
+* Discussions on Merge Requests and Approvers
+* Testing before commit 
+* Testing after commit 
+
+[GitHub Repository](https://github.com/marie-debug/MyCocktail-App) - Public Link
+
+<img src="docs/images/testing/git.png" width="500">
+
 
 # Testing<a name="testing"></a>
 
 [Testing Spreadsheet](https://docs.google.com/spreadsheets/d/1U3pMThnGplNzZ5qum9VkcPLLFF5LL1UI-itZlAt9ZiU/edit#gid=609410239) - Public Link
 
-The above attachment includes testing of:
-* Development throughout proces
+The above attachment includes testing:
+* Development throughout the process
 * Testing of Production once deployed and after significant changes 
+* Testing process before commit and after a merge where documented in GIT merge requests with a before/after screenshots or a succint commit message of the changes. 
 
 <img src="docs/images/testing/dev_test_1Feb.png" width="500">
 
+____________________________________________________________
 
-# Unit Testing<a name="unit-testing"></a>
+## Unit Testing<a name="unit"></a>
 
 Since the Frontend was built with vite, testing is with vitest. 
 
@@ -249,3 +320,14 @@ Websites:
 * https://vitest.dev/
 * https://testing-library.com/docs/react-testing-library/intro/
 
+# Deployment<a name="deployment"></a>
+
+Deployment is with Railway. 
+
+[Railway Deployment](https://mycocktail.up.railway.app/) - My Cocktail App in Production
+
+* Continuous Integration was set up to merge requests
+
+____________________________________________________________
+
+[Return to Top](#top)
